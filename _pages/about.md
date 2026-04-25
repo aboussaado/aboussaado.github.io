@@ -29,12 +29,23 @@ latest_posts:
   limit: 3
 ---
 
-I am a Master of Research student in **Modeling, Optimization, Decision and Organization (MODO)** at **PSL Research University**, in parallel with an engineering degree in **Applied Mathematics and Computer Science for Data Science** at **CY Tech - CY Cergy Paris University**.
+Hi, I am **Othmane Aboussaad**!
 
-My research interests lie at the intersection of **Optimization**, **Dynamical Systems**, **Manifold Learning**, and **Uncertainty Quantification**. I am particularly interested in mathematical and computational methods for high-dimensional data analysis, kernel methods, diffusion operators, and optimization under uncertainty.
+I am a Master of Research student in **Modeling, Optimization, Decision and Organization (MODO)** at [Université Paris Dauphine - PSL](https://dauphine.psl.eu/), in parallel with an engineering degree in **Applied Mathematics and Computer Science for Data Science** at [CY Tech - CY Cergy Paris University](https://cytech.cyu.fr/).
 
-I was a research intern at the **Department of Mathematics, Imperial College London**, where I worked on kernel methods for high-dimensional diffusion operators and statistical learning under the supervision of **Dr. Boumediene Hamzi**. This work focuses on learning data-adaptive kernels, with an emphasis on spectral stability and scalability.
+My academic interests are broadly centered around **applied mathematics**, **machine learning**, **optimization**, **dynamical systems**, and **uncertainty quantification**. I am especially interested in how geometric and probabilistic ideas can help us design more reliable methods for learning, inference, and decision-making in complex systems.
 
-I have also worked on surrogate multi-objective optimization models for costly evaluations in IoT Edge/Fog/Cloud settings at **ETIS Lab**, under the supervision of **Dr. Sonia Yassa**.
+I previously worked as a research intern at the [Department of Mathematics, Imperial College London](https://www.imperial.ac.uk/mathematics/), where I focused on mathematical methods for high-dimensional data analysis and learning in dynamical systems. I have also worked on multi-objective optimization and probabilistic modeling in industrial settings at [ETIS Lab](https://www.etis-lab.fr/).
 
-My current and ongoing research projects include:
+My current research interests include:
+
+- Manifold learning and geometry-aware machine learning.
+- Generative sampling and Bayesian uncertainty quantification.
+- Kernel methods and spectral approaches for high-dimensional data.
+- Optimization and decision-making under uncertainty.
+
+Outside academics, I enjoy following **Formula 1**, practicing **CrossFit**, and watching or playing **football**. I also have a strong interest in **fine arts**, especially painting and the work of great painters.
+
+You can find more about my academic work on my [Google Scholar profile](https://scholar.google.com/citations?user=ESB01yYAAAAJ&hl=en), my [ResearchGate profile](https://www.researchgate.net/profile/Othmane-Aboussaad/research), or through the [publications page](/publications/) of this website.
+
+I am always happy to connect with people interested in applied mathematics, machine learning, optimization or interdisciplinary research. Please feel free to reach out!
