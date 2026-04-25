@@ -461,7 +461,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/othmane-aboussaad", "_blank");
+          window.open("https://www.linkedin.com/in/othmane-aboussaad-79559429b", "_blank");
         },
       },{
         id: 'social-scholar',
