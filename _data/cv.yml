@@ -1,189 +1,236 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Othmane Aboussaad
+  label: MRes MODO student | Applied Mathematics & Computer Science for Data Science
+  email: othmane.aboussaad@dauphine.eu
+  location: Paris, France
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: >
+    Master of Research student in Modeling, Optimization and Decision at PSL Research University,
+    in parallel with an engineering degree in Applied Mathematics and Computer Science for Data Science
+    at CY Tech - CY Cergy Paris University. My research interests lie at the intersection of
+    Optimization, Dynamical Systems, Manifold Learning, and Uncertainty Quantification.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: aboussaado
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: othmane-aboussaad-79559429b
+    - network: Google Scholar
+      username: ESB01yYAAAAJ
+    - network: ResearchGate
+      username: Othmane-Aboussaad
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: PSL Research University
+        location: Paris, France
+        area: Modeling, Optimization, Decision and Organization
+        studyType: Master of Research - MODO
+        start_date: 2025-09
+        end_date: 2026-08
+        summary: >
+          Master of Research focusing on mathematical modeling, optimization, and decision sciences,
+          supported by Université Paris Dauphine - PSL's LAMSADE and Mines Paris - PSL's CGS,
+          undertaken in parallel with my final year at CY Tech.
         highlights:
-          - Description 1.
-          - Description 2.
+          - Accepted with an Excellence Grant from École Normale Supérieure - PSL.
+          - Courses include Mathematical Programming, Decision under Uncertainty, Multiobjective Optimization, Stochastic Programming, Graphs and Applications, and Algorithms for Continuous Optimization.
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - institution: CY Tech - CY Cergy Paris University
+        location: Cergy, France
+        area: Applied Mathematics and Computer Science for Data Science
+        studyType: Engineering Program
+        start_date: 2023-09
+        end_date: 2026-08
+        summary: >
+          Engineering curriculum in applied mathematics, computer science, and data science.
         highlights:
-          - Description 1.
-          - Description 2.
+          - Relevant courses include Probability, Statistics, Algorithmics, Databases, Data Mining, Optimization, Numerical Analysis, Graph Theory, AI, Time Series, and PDE.
+          - Result: Top 10% of the class.
+
+      - institution: CPGE Ibn Ghazi
+        location: Rabat, Morocco
+        area: Mathematics and Physics
+        studyType: Preparatory Classes for Grandes Écoles
+        start_date: 2020-09
+        end_date: 2023-06
+        summary: >
+          Rigorous program preparing students for entrance exams to French engineering schools,
+          with advanced coursework in mathematics and physics.
+        highlights:
+          - Mathematics: Algebra, Linear Algebra, Calculus, Probability, and Differential Calculus.
+          - Physics: Quantum Physics, Mechanics, Signal Processing, Optics, Electromagnetism, and Thermodynamics.
+          - Result: Top 10% of the class.
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Imperial College London
+        position: Research Intern
+        location: London, United Kingdom
+        start_date: 2025-04
+        end_date: 2025-08
+        summary: >
+          Visiting Student at the Department of Mathematics under the supervision of Dr. Boumediene Hamzi.
+          Worked on kernel methods for high-dimensional diffusion operators and statistical learning.
         highlights:
-          - Relativity
-          - Description 2.
+          - Worked on data-adaptive kernels for high-dimensional diffusion operators.
+          - Studied spectral stability and scalability through approximation techniques.
+          - Manuscript in preparation.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: CY Cergy Paris University - ETIS Lab
+        position: Research Project
+        location: Cergy, France
+        start_date: 2024-10
+        end_date: 2025-04
+        summary: >
+          Academic research project at ETIS Lab under the supervision of Dr. Sonia Yassa.
         highlights:
-          - Description 1.
-          - Description 2.
+          - Worked on surrogate multi-objective optimization models with probabilistic models for costly evaluations.
+          - Application context: IoT Edge/Fog/Cloud settings.
+          - Manuscript in preparation.
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: Groupe CDG
+        position: Full-stack Developer Intern
+        location: Rabat, Morocco
+        start_date: 2024-07
+        end_date: 2024-08
+        summary: >
+          Developed a shared services e-catalogue solution for Groupe CDG, Morocco's sovereign investment
+          and public asset management institution.
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+          - Developed a shared services e-catalogue using Angular, Spring, JWT, and MySQL, serving over 60 subsidiaries.
+          - Integrated demo request functionality with secure authentication via JWT.
+          - Managed and tested backend services using Postman and Scrum methodology.
 
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+      - title: Adaptive Kernel Selection for Kernelized Diffusion Maps
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - Othmane Aboussaad
+          - Adam Miraoui
+          - Houman Owhadi
+          - Boumediene Hamzi
+        publisher: arXiv preprint
+        releaseDate: 2026
+        url: https://arxiv.org/abs/2604.18402
+        summary: >
+          Preprint on adaptive kernel selection for kernelized diffusion maps, developed in connection with my research internship at Imperial College London.
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+      - title: Multi-objective Optimization in Industrial Workflows
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+          - Othmane Aboussaad
+          - Sonia Yassa
+        publisher: Manuscript in preparation
+        releaseDate: 2025
+        summary: >
+          Research work conducted at ETIS Lab, CY Cergy Paris University.
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
+      - title: "A Survey of Human-Centered Artificial Intelligence: Explainable Anomaly Detection for Cybersecurity in Smart Manufacturing 5.0"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+          - Othmane Aboussaad
+          - Thi Hien Nguyen
+        publisher: Manuscript in preparation
+        releaseDate: 2025
+        summary: >
+          Literature review on ethical AI applications and cybersecurity for human-centered technologies.
+
+      - title: Effect of Measurement Errors on One-Sided Synthetic-RZ Control Charts for Monitoring the Ratio of Two Normal Variables
+        authors:
+          - Othmane Aboussaad
+          - Thi Hien Nguyen
+          - Kim Duc Tran
+          - Kim Phuc Tran
+        publisher: Manuscript in preparation
+        releaseDate: 2025
+        summary: >
+          Study on the impact of measurement errors on the performance of one-sided Synthetic-RZ control charts.
+
+    Awards:
+      - title: Excellence Scholarship from the Graduate Program in Computer Science - PSL Research University
+        authors:
+          - École Normale Supérieure - PSL
+        date: 2025-06
+        awarder: ENS - PSL
+        summary: >
+          Awarded for outstanding academic performance to admitted students in the 2025-2026 MODO Master specialization.
+
+      - title: Interdisciplinarity Award, Hi!ckathon 2024
+        authors:
+          - Hi! PARIS
+        date: 2024-12
+        awarder: Vinci / Hi! PARIS
+        summary: >
+          Awarded during the Hi!ckathon 2024 for AquaShield, a project recognized for interdisciplinary collaboration
+          across data science, water resource management, and financial modeling.
+
+    Certifications:
+      - name: Cambridge Centre for AI in Medicine - ML Summer School 2025
+        date: 2025-09
+        issuer: University of Cambridge
+        icon: fa-solid fa-graduation-cap
+        summary: >
+          Intensive summer school on AI and machine learning for healthcare, covering LLMs, generative models,
+          causality, data-centric AI, time series, uncertainty, digital twins, AutoML, and responsible AI.
+
+      - name: Hack-Nation Global AI Hackathon
+        date: 2025-08
+        issuer: Hack-Nation / MIT Sloan AI Club
+        icon: fa-solid fa-code
+        summary: >
+          Global 24-hour online AI hackathon. Contribution: developed a minimal prototype inspired by AlphaFold
+          for protein structure prediction.
+
+      - name: 2025 SpaceHACK for Sustainability
+        date: 2025-04
+        issuer: Arizona State University, University of Toronto, and CY Cergy Paris University
+        icon: fa-solid fa-earth-africa
+        summary: >
+          Two-day hackathon focused on sustainability. Selected track: Environmental Migration in Sahelian Africa.
 
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Programming
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: Python, Java, JavaScript, C, SQL, R, HTML/CSS, Julia
+
+      - name: Tools and Frameworks
+        level: Advanced
+        icon: fa-solid fa-screwdriver-wrench
+        keywords: NumPy, Matplotlib, Spring, MySQL, Postman, JWT, Angular, UNIX/Linux, Microsoft Office
+
+      - name: Research Areas
+        level: Advanced
+        icon: fa-solid fa-chart-line
+        keywords: Optimization, Dynamical Systems, Manifold Learning, Uncertainty Quantification, Machine Learning, Kernel Methods
+
+      - name: Soft Skills
+        level: Advanced
+        icon: fa-solid fa-users
+        keywords: Problem-solving, Communication, Leadership, Teamwork, Time Management
 
     Languages:
-      - name: German
-        summary: "Native speaker"
+      - name: Arabic
+        summary: Native
+
+      - name: French
+        summary: Bilingual
 
       - name: English
-        summary: "Fluent"
+        summary: Fluent
+
+      - name: Spanish
+        summary: Intermediate
+
+      - name: German
+        summary: Beginner
 
     Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Research
+        icon: fa-solid fa-flask
+        keywords: Applied Mathematics, Machine Learning, Optimization, Generative Modeling, Inverse Problems, Uncertainty Quantification
 
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
+      - name: Sports
+        icon: fa-solid fa-dumbbell
+        keywords: CrossFit, Football, Surfing, Formula 1
 
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Fine Arts
+        icon: fa-solid fa-palette
+        keywords: Painting, Great painters, Museums, Visual arts
