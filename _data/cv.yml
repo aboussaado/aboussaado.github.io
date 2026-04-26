@@ -1,8 +1,8 @@
 cv:
-  name: Othmane Aboussaad
-  label: MRes MODO student | Applied Mathematics & Computer Science for Data Science
-  email: othmane.aboussaad@dauphine.eu
-  location: Paris, France
+  name: "Othmane Aboussaad"
+  label: "MRes MODO student | Applied Mathematics & Computer Science for Data Science"
+  email: "othmane.aboussaad@dauphine.eu"
+  location: "Paris, France"
   image: ""
   summary: >
     Master of Research student in Modeling, Optimization and Decision at PSL Research University,
@@ -11,222 +11,224 @@ cv:
     Optimization, Dynamical Systems, Manifold Learning, and Uncertainty Quantification.
 
   social_networks:
-    - network: GitHub
-      username: aboussaado
-    - network: LinkedIn
-      username: othmane-aboussaad-79559429b
-    - network: Google Scholar
-      username: ESB01yYAAAAJ
-    - network: ResearchGate
-      username: Othmane-Aboussaad
+    - network: "GitHub"
+      username: "aboussaado"
+    - network: "LinkedIn"
+      username: "othmane-aboussaad-79559429b"
+    - network: "Google Scholar"
+      username: "ESB01yYAAAAJ"
+    - network: "ResearchGate"
+      username: "Othmane-Aboussaad"
 
   sections:
     Education:
-      - institution: PSL Research University
-        location: Paris, France
-        area: Modeling, Optimization, Decision and Organization
-        studyType: Master of Research - MODO
-        start_date: 2025-09
-        end_date: 2026-08
+      - institution: "PSL Research University"
+        location: "Paris, France"
+        area: "Modeling, Optimization, Decision and Organization"
+        studyType: "Master of Research - MODO"
+        start_date: "2025-09"
+        end_date: "2026-08"
         summary: >
           Master of Research focusing on mathematical modeling, optimization, and decision sciences,
           supported by Université Paris Dauphine - PSL's LAMSADE and Mines Paris - PSL's CGS,
           undertaken in parallel with my final year at CY Tech.
         highlights:
-          - Accepted with an Excellence Grant from École Normale Supérieure - PSL.
-          - Courses include Mathematical Programming, Decision under Uncertainty, Multiobjective Optimization, Stochastic Programming, Graphs and Applications, and Algorithms for Continuous Optimization.
+          - "Accepted with an Excellence Grant from École Normale Supérieure - PSL."
+          - "Courses include Mathematical Programming, Decision under Uncertainty, Multiobjective Optimization, Stochastic Programming, Graphs and Applications, and Algorithms for Continuous Optimization."
 
-      - institution: CY Tech - CY Cergy Paris University
-        location: Cergy, France
-        area: Applied Mathematics and Computer Science for Data Science
-        studyType: Engineering Program
-        start_date: 2023-09
-        end_date: 2026-08
+      - institution: "CY Tech - CY Cergy Paris University"
+        location: "Cergy, France"
+        area: "Applied Mathematics and Computer Science for Data Science"
+        studyType: "Engineering Program"
+        start_date: "2023-09"
+        end_date: "2026-08"
         summary: >
           Engineering curriculum in applied mathematics, computer science, and data science.
         highlights:
-          - Relevant courses include Probability, Statistics, Algorithmics, Databases, Data Mining, Optimization, Numerical Analysis, Graph Theory, AI, Time Series, and PDE.
-          - Result: Top 10% of the class.
+          - "Relevant courses include Probability, Statistics, Algorithmics, Databases, Data Mining, Optimization, Numerical Analysis, Graph Theory, AI, Time Series, and PDE."
+          - "Result: Top 10% of the class."
 
-      - institution: CPGE Ibn Ghazi
-        location: Rabat, Morocco
-        area: Mathematics and Physics
-        studyType: Preparatory Classes for Grandes Écoles
-        start_date: 2020-09
-        end_date: 2023-06
+      - institution: "CPGE Ibn Ghazi"
+        location: "Rabat, Morocco"
+        area: "Mathematics and Physics"
+        studyType: "Preparatory Classes for Grandes Écoles"
+        start_date: "2020-09"
+        end_date: "2023-06"
         summary: >
           Rigorous program preparing students for entrance exams to French engineering schools,
           with advanced coursework in mathematics and physics.
         highlights:
-          - Mathematics: Algebra, Linear Algebra, Calculus, Probability, and Differential Calculus.
-          - Physics: Quantum Physics, Mechanics, Signal Processing, Optics, Electromagnetism, and Thermodynamics.
-          - Result: Top 10% of the class.
+          - "Mathematics: Algebra, Linear Algebra, Calculus, Probability, and Differential Calculus."
+          - "Physics: Quantum Physics, Mechanics, Signal Processing, Optics, Electromagnetism, and Thermodynamics."
+          - "Result: Top 10% of the class."
 
     Experience:
-      - company: Imperial College London
-        position: Research Intern
-        location: London, United Kingdom
-        start_date: 2025-04
-        end_date: 2025-08
+      - company: "Imperial College London"
+        position: "Research Intern"
+        location: "London, United Kingdom"
+        start_date: "2025-04"
+        end_date: "2025-08"
         summary: >
           Visiting Student at the Department of Mathematics under the supervision of Dr. Boumediene Hamzi.
           Worked on kernel methods for high-dimensional diffusion operators and statistical learning.
         highlights:
-          - Worked on data-adaptive kernels for high-dimensional diffusion operators.
-          - Studied spectral stability and scalability through approximation techniques.
-          - Manuscript in preparation.
+          - "Worked on data-adaptive kernels for high-dimensional diffusion operators."
+          - "Studied spectral stability and scalability through approximation techniques."
+          - "Resulted in the arXiv preprint Adaptive Kernel Selection for Kernelized Diffusion Maps."
 
-      - company: CY Cergy Paris University - ETIS Lab
-        position: Research Project
-        location: Cergy, France
-        start_date: 2024-10
-        end_date: 2025-04
+      - company: "CY Cergy Paris University - ETIS Lab"
+        position: "Research Project"
+        location: "Cergy, France"
+        start_date: "2024-10"
+        end_date: "2025-04"
         summary: >
           Academic research project at ETIS Lab under the supervision of Dr. Sonia Yassa.
         highlights:
-          - Worked on surrogate multi-objective optimization models with probabilistic models for costly evaluations.
-          - Application context: IoT Edge/Fog/Cloud settings.
-          - Manuscript in preparation.
+          - "Worked on surrogate multi-objective optimization models with probabilistic models for costly evaluations."
+          - "Application context: IoT Edge/Fog/Cloud settings."
+          - "Manuscript in preparation."
 
-      - company: Groupe CDG
-        position: Full-stack Developer Intern
-        location: Rabat, Morocco
-        start_date: 2024-07
-        end_date: 2024-08
+      - company: "Groupe CDG"
+        position: "Full-stack Developer Intern"
+        location: "Rabat, Morocco"
+        start_date: "2024-07"
+        end_date: "2024-08"
         summary: >
           Developed a shared services e-catalogue solution for Groupe CDG, Morocco's sovereign investment
           and public asset management institution.
         highlights:
-          - Developed a shared services e-catalogue using Angular, Spring, JWT, and MySQL, serving over 60 subsidiaries.
-          - Integrated demo request functionality with secure authentication via JWT.
-          - Managed and tested backend services using Postman and Scrum methodology.
+          - "Developed a shared services e-catalogue using Angular, Spring, JWT, and MySQL, serving over 60 subsidiaries."
+          - "Integrated demo request functionality with secure authentication via JWT."
+          - "Managed and tested backend services using Postman and Scrum methodology."
 
     Publications:
-      - title: Adaptive Kernel Selection for Kernelized Diffusion Maps
+      - title: "Adaptive Kernel Selection for Kernelized Diffusion Maps"
         authors:
-          - Othmane Aboussaad
-          - Adam Miraoui
-          - Houman Owhadi
-          - Boumediene Hamzi
-        publisher: arXiv preprint
-        releaseDate: 2026
-        url: https://arxiv.org/abs/2604.18402
+          - "Othmane Aboussaad"
+          - "Adam Miraoui"
+          - "Boumediene Hamzi"
+          - "Houman Owhadi"
+        publisher: "arXiv preprint"
+        releaseDate: "2026"
+        url: "https://arxiv.org/abs/2604.18402"
         summary: >
-          Preprint on adaptive kernel selection for kernelized diffusion maps, developed in connection with my research internship at Imperial College London.
+          Preprint on adaptive kernel selection for kernelized diffusion maps, developed in connection
+          with my research internship at Imperial College London.
 
-      - title: Multi-objective Optimization in Industrial Workflows
+      - title: "Multi-objective Optimization in Industrial Workflows"
         authors:
-          - Othmane Aboussaad
-          - Sonia Yassa
-        publisher: Manuscript in preparation
-        releaseDate: 2025
+          - "Othmane Aboussaad"
+          - "Sonia Yassa"
+        publisher: "Manuscript in preparation"
+        releaseDate: "2025"
         summary: >
           Research work conducted at ETIS Lab, CY Cergy Paris University.
 
       - title: "A Survey of Human-Centered Artificial Intelligence: Explainable Anomaly Detection for Cybersecurity in Smart Manufacturing 5.0"
         authors:
-          - Othmane Aboussaad
-          - Thi Hien Nguyen
-        publisher: Manuscript in preparation
-        releaseDate: 2025
+          - "Othmane Aboussaad"
+          - "Thi Hien Nguyen"
+        publisher: "Manuscript in preparation"
+        releaseDate: "2025"
         summary: >
           Literature review on ethical AI applications and cybersecurity for human-centered technologies.
 
-      - title: Effect of Measurement Errors on One-Sided Synthetic-RZ Control Charts for Monitoring the Ratio of Two Normal Variables
+      - title: "Effect of Measurement Errors on One-Sided Synthetic-RZ Control Charts for Monitoring the Ratio of Two Normal Variables"
         authors:
-          - Othmane Aboussaad
-          - Thi Hien Nguyen
-          - Kim Duc Tran
-          - Kim Phuc Tran
-        publisher: Manuscript in preparation
-        releaseDate: 2025
+          - "Othmane Aboussaad"
+          - "Thi Hien Nguyen"
+          - "Kim Duc Tran"
+          - "Kim Phuc Tran"
+        publisher: "Manuscript in preparation"
+        releaseDate: "2025"
         summary: >
           Study on the impact of measurement errors on the performance of one-sided Synthetic-RZ control charts.
 
     Awards:
-      - title: Excellence Scholarship from the Graduate Program in Computer Science - PSL Research University
+      - title: "Excellence Scholarship from the Graduate Program in Computer Science - PSL Research University"
         authors:
-          - École Normale Supérieure - PSL
-        date: 2025-06
-        awarder: ENS - PSL
+          - "École Normale Supérieure - PSL"
+        date: "2025-06"
+        awarder: "ENS - PSL"
         summary: >
           Awarded for outstanding academic performance to admitted students in the 2025-2026 MODO Master specialization.
 
-      - title: Interdisciplinarity Award, Hi!ckathon 2024
+      - title: "Interdisciplinarity Award, Hi!ckathon 2024"
         authors:
-          - Hi! PARIS
-        date: 2024-12
-        awarder: Vinci / Hi! PARIS
+          - "Hi! PARIS"
+        date: "2024-12"
+        awarder: "Vinci / Hi! PARIS"
         summary: >
           Awarded during the Hi!ckathon 2024 for AquaShield, a project recognized for interdisciplinary collaboration
           across data science, water resource management, and financial modeling.
 
-    Certifications:
-      - name: Cambridge Centre for AI in Medicine - ML Summer School 2025
-        date: 2025-09
-        issuer: University of Cambridge
-        icon: fa-solid fa-graduation-cap
+    Certificates:
+      - name: "Cambridge Centre for AI in Medicine - ML Summer School 2025"
+        date: "2025-09"
+        issuer: "University of Cambridge"
+        icon: "fa-solid fa-graduation-cap"
         summary: >
           Intensive summer school on AI and machine learning for healthcare, covering LLMs, generative models,
           causality, data-centric AI, time series, uncertainty, digital twins, AutoML, and responsible AI.
 
-      - name: Hack-Nation Global AI Hackathon
-        date: 2025-08
-        issuer: Hack-Nation / MIT Sloan AI Club
-        icon: fa-solid fa-code
+      - name: "Hack-Nation Global AI Hackathon"
+        date: "2025-08"
+        issuer: "Hack-Nation / MIT Sloan AI Club"
+        icon: "fa-solid fa-code"
         summary: >
-          Global 24-hour online AI hackathon. Contribution: developed a minimal prototype inspired by AlphaFold
-          for protein structure prediction.
+          Global 24-hour online AI hackathon.
+          Contribution: developed a minimal prototype inspired by AlphaFold for protein structure prediction.
 
-      - name: 2025 SpaceHACK for Sustainability
-        date: 2025-04
-        issuer: Arizona State University, University of Toronto, and CY Cergy Paris University
-        icon: fa-solid fa-earth-africa
+      - name: "2025 SpaceHACK for Sustainability"
+        date: "2025-04"
+        issuer: "Arizona State University, University of Toronto, and CY Cergy Paris University"
+        icon: "fa-solid fa-earth-africa"
         summary: >
-          Two-day hackathon focused on sustainability. Selected track: Environmental Migration in Sahelian Africa.
+          Two-day hackathon focused on sustainability.
+          Selected track: Environmental Migration in Sahelian Africa.
 
     Skills:
-      - name: Programming
-        icon: fa-solid fa-code
-        keywords: Python, Java, JavaScript, C, SQL, R, HTML/CSS, Julia
+      - name: "Programming"
+        icon: "fa-solid fa-code"
+        keywords: "Python, Java, JavaScript, C, SQL, R, HTML/CSS, Julia"
 
-      - name: Tools and Frameworks
-        icon: fa-solid fa-screwdriver-wrench
-        keywords: NumPy, Matplotlib, Spring, MySQL, Postman, JWT, Angular, UNIX/Linux, Microsoft Office
+      - name: "Tools and Frameworks"
+        icon: "fa-solid fa-screwdriver-wrench"
+        keywords: "NumPy, Matplotlib, Spring, MySQL, Postman, JWT, Angular, UNIX/Linux, Microsoft Office"
 
-      - name: Research Areas
-        icon: fa-solid fa-chart-line
-        keywords: Optimization, Dynamical Systems, Manifold Learning, Uncertainty Quantification, Machine Learning, Kernel Methods
+      - name: "Research Areas"
+        icon: "fa-solid fa-chart-line"
+        keywords: "Optimization, Dynamical Systems, Manifold Learning, Uncertainty Quantification, Machine Learning, Kernel Methods"
 
-      - name: Soft Skills
-        icon: fa-solid fa-users
-        keywords: Problem-solving, Communication, Leadership, Teamwork, Time Management
+      - name: "Soft Skills"
+        icon: "fa-solid fa-users"
+        keywords: "Problem-solving, Communication, Leadership, Teamwork, Time Management"
 
     Languages:
-      - name: Arabic
-        summary: Native
+      - name: "Arabic"
+        summary: "Native"
 
-      - name: French
-        summary: Bilingual
+      - name: "French"
+        summary: "Bilingual"
 
-      - name: English
-        summary: Fluent
+      - name: "English"
+        summary: "Fluent"
 
-      - name: Spanish
-        summary: Intermediate
+      - name: "Spanish"
+        summary: "Intermediate"
 
-      - name: German
-        summary: Beginner
+      - name: "German"
+        summary: "Beginner"
 
     Interests:
-      - name: Research
-        icon: fa-solid fa-flask
-        keywords: Applied Mathematics, Machine Learning, Optimization, Generative Modeling, Inverse Problems, Uncertainty Quantification
+      - name: "Research"
+        icon: "fa-solid fa-flask"
+        keywords: "Applied Mathematics, Machine Learning, Optimization, Generative Modeling, Inverse Problems, Uncertainty Quantification"
 
-      - name: Sports
-        icon: fa-solid fa-dumbbell
-        keywords: CrossFit, Football, Surfing, Formula 1
+      - name: "Sports"
+        icon: "fa-solid fa-dumbbell"
+        keywords: "CrossFit, Football, Surfing, Formula 1"
 
-      - name: Fine Arts
-        icon: fa-solid fa-palette
-        keywords: Painting, Great painters, Museums, Visual arts
+      - name: "Fine Arts"
+        icon: "fa-solid fa-palette"
+        keywords: "Painting, Great painters, Museums, Visual arts"
