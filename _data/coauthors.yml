@@ -1,34 +1,23 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"miraoui":
+  - firstname: ["Adam", "A."]
+    url: https://arxiv.org/abs/2604.18402
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"hamzi":
+  - firstname: ["Boumediene", "B."]
+    url: https://sites.google.com/site/boumedienehamzi/home
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"owhadi":
+  - firstname: ["Houman", "H."]
+    url: https://users.cms.caltech.edu/~owhadi/index.htm
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"yassa":
+  - firstname: ["Sonia", "S."]
+    url: https://www.etis-lab.fr/2022/02/25/yassa-sonia/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"nguyen":
+  - firstname: ["Thi Hien", "T. H.", "Thi Hien Nguyen"]
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"tran":
+  - firstname: ["Kim Duc", "K. D.", "Kim Duc Tran"]
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
-
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
-
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+  - firstname: ["Kim Phuc", "K. P.", "Kim Phuc Tran"]
