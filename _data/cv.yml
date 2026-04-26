@@ -187,22 +187,18 @@ cv:
 
     Skills:
       - name: Programming
-        level: Advanced
         icon: fa-solid fa-code
         keywords: Python, Java, JavaScript, C, SQL, R, HTML/CSS, Julia
 
       - name: Tools and Frameworks
-        level: Advanced
         icon: fa-solid fa-screwdriver-wrench
         keywords: NumPy, Matplotlib, Spring, MySQL, Postman, JWT, Angular, UNIX/Linux, Microsoft Office
 
       - name: Research Areas
-        level: Advanced
         icon: fa-solid fa-chart-line
         keywords: Optimization, Dynamical Systems, Manifold Learning, Uncertainty Quantification, Machine Learning, Kernel Methods
 
       - name: Soft Skills
-        level: Advanced
         icon: fa-solid fa-users
         keywords: Problem-solving, Communication, Leadership, Teamwork, Time Management
 
