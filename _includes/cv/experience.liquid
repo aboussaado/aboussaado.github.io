@@ -5,7 +5,7 @@
   - JSONResume: name, position, startDate, endDate, location, url, summary, highlights
 
   Custom:
-  - Adds small transparent PNG logos next to selected experience entries.
+  - Adds larger transparent PNG logos in the left column above the date badge.
   - Expected logo files:
     assets/img/cv_logos/imperial_logo.png
     assets/img/cv_logos/cdg_logo.png
@@ -17,6 +17,32 @@
     <li class="list-group-item">
       <div class="row">
         <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
+          {% capture company_name %}
+            {% if entry.name %}{{ entry.name }}{% elsif entry.company %}{{ entry.company }}{% elsif entry.organization %}{{ entry.organization }}{% endif %}
+          {% endcapture %}
+          {% assign company_name = company_name | strip %}
+
+          {% assign logo_file = '' %}
+          {% if company_name == 'Imperial College London' %}
+            {% assign logo_file = 'imperial_logo.png' %}
+          {% elsif company_name == 'Groupe CDG' %}
+            {% assign logo_file = 'cdg_logo.png' %}
+          {% elsif company_name == 'CY Cergy Paris University - ETIS Lab' %}
+            {% assign logo_file = 'cyu_logo.png' %}
+          {% elsif company_name contains 'CY Cergy Paris University' %}
+            {% assign logo_file = 'cyu_logo.png' %}
+          {% endif %}
+
+          {% if logo_file != '' %}
+            <div class="mb-2">
+              <img
+                src="{{ '/assets/img/cv_logos/' | append: logo_file | relative_url }}"
+                alt="{{ company_name }} logo"
+                style="max-height: 52px; max-width: 85px; object-fit: contain;"
+              >
+            </div>
+          {% endif %}
+
           {% capture start_date %}
             {% if entry.start_date %}{{ entry.start_date }}{% elsif entry.startDate %}{{ entry.startDate }}{% endif %}
           {% endcapture %}
@@ -76,33 +102,8 @@
             <h6 class="title font-weight-bold ml-1 ml-md-4">{{ position_title }}</h6>
           {% endif %}
 
-          {% capture company_name %}
-            {% if entry.name %}{{ entry.name }}{% elsif entry.company %}{{ entry.company }}{% elsif entry.organization %}{{ entry.organization }}{% endif %}
-          {% endcapture %}
-          {% assign company_name = company_name | strip %}
-
-          {% assign logo_file = '' %}
-          {% if company_name == 'Imperial College London' %}
-            {% assign logo_file = 'imperial_logo.png' %}
-          {% elsif company_name == 'Groupe CDG' %}
-            {% assign logo_file = 'cdg_logo.png' %}
-          {% elsif company_name == 'CY Cergy Paris University - ETIS Lab' %}
-            {% assign logo_file = 'cyu_logo.png' %}
-          {% elsif company_name contains 'CY Cergy Paris University' %}
-            {% assign logo_file = 'cyu_logo.png' %}
-          {% endif %}
-
           {% if company_name != '' %}
-            <h6 class="ml-1 ml-md-4 d-flex align-items-center" style="font-size: 0.95rem">
-              {% if logo_file != '' %}
-                <img
-                  src="{{ '/assets/img/cv_logos/' | append: logo_file | relative_url }}"
-                  alt="{{ company_name }} logo"
-                  style="height: 24px; width: 24px; object-fit: contain; margin-right: 8px;"
-                >
-              {% endif %}
-              <span>{{ company_name }}</span>
-            </h6>
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ company_name }}</h6>
           {% endif %}
 
           {% if entry.summary %}
