@@ -48,4 +48,4 @@ Outside academics, I enjoy following **Formula 1**, practicing **CrossFit**, **s
 
 You can find more about my academic work on my [Google Scholar profile](https://scholar.google.com/citations?user=ESB01yYAAAAJ&hl=en), my [ResearchGate profile](https://www.researchgate.net/profile/Othmane-Aboussaad/research), or through the [publications page](/publications/) of this website.
 
-I am always happy to connect with people interested in applied mathematics, machine learning, optimization or interdisciplinary research. Please feel free to reach out!
+I am always happy to connect with people interested in applied mathematics, machine learning, optimization or interdisciplinary research. Please feel free to [reach out on LinkedIn](https://www.linkedin.com/in/othmane-aboussaad-79559429b/)!
