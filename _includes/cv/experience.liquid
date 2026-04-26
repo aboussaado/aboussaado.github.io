@@ -34,11 +34,11 @@
           {% endif %}
 
           {% if logo_file != '' %}
-            <div class="mb-2">
+            <div class="cv-logo-wrapper">
               <img
                 src="{{ '/assets/img/cv_logos/' | append: logo_file | relative_url }}"
                 alt="{{ company_name }} logo"
-                style="max-height: 52px; max-width: 85px; object-fit: contain;"
+                class="cv-experience-logo"
               >
             </div>
           {% endif %}
