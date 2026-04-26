@@ -8,7 +8,7 @@ subtitle: >
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: pdp.png
   image_circular: false
   more_info: >
     <p>Paris, France</p>
