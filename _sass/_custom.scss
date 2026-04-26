@@ -1,0 +1,26 @@
+.cv-logo-wrapper {
+  height: 58px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.6rem auto;
+}
+
+.cv-experience-logo {
+  max-height: 52px;
+  max-width: 110px;
+  object-fit: contain;
+}
+
+.date-column .table-cv {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.date-column .location {
+  text-align: center;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
