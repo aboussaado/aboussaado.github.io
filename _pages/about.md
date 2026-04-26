@@ -44,7 +44,7 @@ My current research interests include:
 - Kernel methods and spectral approaches for high-dimensional data.
 - Optimization and decision-making under uncertainty.
 
-Outside academics, I enjoy following **Formula 1**, practicing **CrossFit**, **surfing** and watching or playing **football**. I also have a strong interest in **fine arts**, especially painting and the work of great painters.
+Outside academics, I enjoy following **Formula 1**, practicing **CrossFit**, **surfing**, and watching or playing **football**. I also have a strong interest in **fine arts**, especially painting and the work of great painters. **I’m a big foodie too 😁**
 
 You can find more about my academic work on my [Google Scholar profile](https://scholar.google.com/citations?user=ESB01yYAAAAJ&hl=en), my [ResearchGate profile](https://www.researchgate.net/profile/Othmane-Aboussaad/research), or through the [publications page](/publications/) of this website.
 
