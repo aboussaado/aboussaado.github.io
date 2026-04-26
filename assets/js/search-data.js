@@ -369,10 +369,7 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "news-cy-tech-published-a-profile-about-my-academic-journey-the-article-highlights-my-research-project-at-etis-lab-my-internship-at-imperial-college-london-my-admission-to-the-modo-master-s-program-at-université-paris-dauphine-psl-and-the-excellence-scholarship-from-ens-psl",
+            },},{id: "news-cy-tech-published-a-profile-about-my-academic-journey-the-article-highlights-my-research-project-at-etis-lab-my-internship-at-imperial-college-london-my-admission-to-the-modo-master-s-program-at-université-paris-dauphine-psl-and-the-excellence-scholarship-from-ens-psl",
           title: 'CY Tech published a profile about my academic journey!. The article highlights my...',
           description: "",
           section: "News",},{id: "projects-project-1",
