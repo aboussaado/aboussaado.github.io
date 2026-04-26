@@ -5,7 +5,7 @@
   - JSONResume: name, position, startDate, endDate, location, url, summary, highlights
 
   Custom:
-  - Adds larger transparent PNG logos in the left column above the date badge.
+  - Adds transparent PNG logos in the left column above the date badge.
   - Expected logo files:
     assets/img/cv_logos/imperial_logo.png
     assets/img/cv_logos/cdg_logo.png
@@ -34,11 +34,27 @@
           {% endif %}
 
           {% if logo_file != '' %}
-            <div class="cv-logo-wrapper">
+            <div
+              style="
+                height: 58px;
+                width: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 0.6rem auto;
+              "
+            >
               <img
                 src="{{ '/assets/img/cv_logos/' | append: logo_file | relative_url }}"
                 alt="{{ company_name }} logo"
-                class="cv-experience-logo"
+                style="
+                  max-height: 42px;
+                  max-width: 95px;
+                  width: auto;
+                  height: auto;
+                  object-fit: contain;
+                  display: block;
+                "
               >
             </div>
           {% endif %}
@@ -61,7 +77,7 @@
             {% assign date = '' %}
           {% endif %}
 
-          <table class="table-cv">
+          <table class="table-cv" style="margin-left: auto; margin-right: auto;">
             <tbody>
               <tr>
                 <td>
@@ -77,7 +93,7 @@
               {% if location != '' %}
                 <tr>
                   <td>
-                    <p class="location">
+                    <p class="location" style="text-align: center; margin-top: 0.35rem; font-size: 0.85rem; line-height: 1.2;">
                       <i class="fa-solid fa-location-dot iconlocation"></i>
                       {{ location }}
                     </p>
