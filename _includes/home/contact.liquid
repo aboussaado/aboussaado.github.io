@@ -1,0 +1,62 @@
+<section class="home-contact" id="contact">
+  <div class="home-contact__inner">
+
+    <div class="home-contact__heading">
+      <span class="home-section-number">06</span>
+      <h2>Contact</h2>
+    </div>
+
+    <div class="home-contact__content">
+      <p class="home-contact__eyebrow">Get in touch</p>
+
+      <h3 class="home-contact__statement">
+        See a potential fit for research,
+        a PhD project, or an applied ML role?
+        <span>Let’s talk.</span>
+      </h3>
+
+      <a
+        class="home-contact__email"
+        href="mailto:{{ site.data.socials.email }}"
+      >
+        {{ site.data.socials.email }}
+        <span aria-hidden="true">↗</span>
+      </a>
+
+      <div class="home-contact__links">
+
+        {% if site.data.socials.linkedin_username %}
+          <a
+            href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+        {% endif %}
+
+        {% if site.data.socials.github_username %}
+          <a
+            href="https://github.com/{{ site.data.socials.github_username }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub ↗
+          </a>
+        {% endif %}
+
+        {% if site.data.socials.scholar_userid %}
+          <a
+            href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Scholar ↗
+          </a>
+        {% endif %}
+
+      </div>
+    </div>
+
+  </div>
+</section>

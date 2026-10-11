@@ -174,3 +174,74 @@ window.setTimeout(() => {
   });
 });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = Array.from(
+    document.querySelectorAll(".home-section-nav__link")
+  );
+
+  if (!navLinks.length) return;
+
+  const sections = navLinks
+    .map((link) => {
+      const id = link.dataset.section;
+      const section = document.getElementById(id);
+
+      return section ? { id, section, link } : null;
+    })
+    .filter(Boolean);
+
+  if (!sections.length) return;
+
+  const setActiveSection = (id) => {
+    sections.forEach(({ id: sectionId, link }) => {
+      const isActive = sectionId === id;
+
+      link.classList.toggle("is-active", isActive);
+
+      if (isActive) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const updateActiveSection = () => {
+    const targetY = window.innerHeight * 0.45;
+
+    let closest = sections[0];
+    let closestDistance = Infinity;
+
+    sections.forEach((item) => {
+      const rect = item.section.getBoundingClientRect();
+      const distance = Math.abs(rect.top - targetY);
+
+      if (distance < closestDistance) {
+        closest = item;
+        closestDistance = distance;
+      }
+    });
+
+    setActiveSection(closest.id);
+  };
+
+  let ticking = false;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (ticking) return;
+
+      ticking = true;
+
+      window.requestAnimationFrame(() => {
+        updateActiveSection();
+        ticking = false;
+      });
+    },
+    { passive: true }
+  );
+
+  updateActiveSection();
+});
