@@ -15,9 +15,57 @@
       </p>
 
       <div class="home-hero__affiliations">
-        <p>Paris-Dauphine PSL · CY Tech</p>
+        <p>PSL University · CY Cergy Paris University</p>
         <p>Research experience at Imperial College London</p>
       </div>
+
+      <div class="home-hero__socials" aria-label="Social links">
+  <a
+    class="home-hero__social-link"
+    href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Google Scholar"
+    title="Google Scholar"
+  >
+    <i class="ai ai-google-scholar" aria-hidden="true"></i>
+  </a>
+
+  <a
+    class="home-hero__social-link"
+    href="https://github.com/{{ site.data.socials.github_username }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="GitHub"
+    title="GitHub"
+  >
+    <i class="fa-brands fa-github" aria-hidden="true"></i>
+  </a>
+
+  <a
+    class="home-hero__social-link"
+    href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+    title="LinkedIn"
+  >
+    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+  </a>
+
+  <a
+    class="home-hero__social-link"
+    href="mailto:{{ site.data.socials.email }}"
+    aria-label="Email"
+    title="Email"
+  >
+    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+  </a>
+
+  <a class="home-hero__cv-link" href="{{ '/cv/' | relative_url }}">
+    CV <span aria-hidden="true">↗</span>
+  </a>
+</div>
     </div>
 
     <div class="home-hero__portrait">
