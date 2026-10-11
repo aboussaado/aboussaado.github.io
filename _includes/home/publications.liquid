@@ -1,0 +1,16 @@
+<section class="home-publications" id="publications">
+  <div class="home-publications__heading">
+    <span class="home-section-number">04</span>
+    <h2>Selected<br>Publications</h2>
+  </div>
+
+  <div class="home-publications__content">
+    <div class="home-publications__list">
+      {% bibliography --query @*[selected=true] --max 1 --group_by none %}
+    </div>
+
+    <a class="home-publications__all" href="{{ '/publications/' | relative_url }}">
+      View all publications <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</section>

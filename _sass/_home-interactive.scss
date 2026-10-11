@@ -907,3 +907,288 @@ html[data-theme="dark"] {
     gap: 0.8rem;
   }
 }
+
+/* =========================================================
+   Selected Publications
+   ========================================================= */
+
+.home-publications {
+  max-width: var(--home-section-width);
+  margin: 0 auto;
+  padding: 7rem 3rem 9rem;
+
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(4rem, 9vw, 8rem);
+
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.home-publications__heading {
+  position: sticky;
+  top: 9rem;
+  align-self: start;
+}
+
+.home-publications__heading h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 4.5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.92;
+
+  color: var(--global-text-color);
+}
+
+/* ---------- Homepage publication card ---------- */
+
+.home-publications__list .bibliography {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-publications__list .bibliography > li {
+  margin: 0;
+  padding: 0;
+}
+
+.home-publication-card {
+  position: relative;
+
+  display: block;
+
+  padding: 2.5rem 0 2.8rem;
+
+  border-top: 1px solid var(--global-divider-color);
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.home-publication-card::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--home-graphic-accent);
+
+  transition: width 320ms ease;
+}
+
+.home-publication-card:hover::after {
+  width: 100%;
+}
+
+/* ---------- Preview image ---------- */
+
+.home-publication-card__preview {
+  width: 100%;
+  max-width: 720px;
+
+  margin: 1.7rem 0 1.45rem;
+
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.home-publication-card__preview img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 8px;
+
+  transition: transform 350ms ease;
+}
+
+.home-publication-card:hover .home-publication-card__preview img {
+  transform: scale(1.018);
+}
+
+/* ---------- Publication text ---------- */
+
+.home-publication-card__year {
+  display: block;
+  margin-bottom: 0.4rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.08rem;
+  font-weight: 300;
+
+  color: var(--global-text-color-light);
+}
+
+.home-publication-card__title {
+  max-width: 720px;
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.35rem, 3.1vw, 3rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+
+  color: var(--global-theme-color);
+}
+
+.home-publication-card__authors {
+  margin: 0 0 0.18rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.22rem;
+  font-weight: 300;
+  line-height: 1.42;
+
+  color: var(--global-text-color);
+}
+
+.home-publication-card__venue {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.14rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.42;
+
+  color: var(--global-text-color-light);
+}
+
+/* ---------- Publication links ---------- */
+
+.home-publication-card__links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+
+  margin-top: 1.25rem;
+}
+
+.home-publication-card__links a,
+.home-publication-card__cite,
+.home-publications__all {
+  position: relative;
+
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+  background-image: none !important;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.14rem;
+  font-weight: 400;
+  line-height: 1.2;
+
+  color: var(--global-theme-color);
+
+  text-decoration: none !important;
+
+  cursor: pointer;
+
+  transition: color 200ms ease;
+}
+
+.home-publication-card__cite {
+  transition:
+    color 200ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.home-publication-card__cite.is-changing {
+  opacity: 0;
+  transform: translateY(-2px);
+}
+
+.home-publication-card__links a::after,
+.home-publication-card__cite::after,
+.home-publications__all::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+
+  width: 0;
+  height: 1px;
+
+  background: currentColor;
+
+  transition: width 240ms ease;
+}
+
+.home-publication-card__links a:hover,
+.home-publication-card__cite:hover,
+.home-publications__all:hover {
+  color: var(--global-hover-color);
+  text-decoration: none !important;
+}
+
+.home-publication-card__links a:hover::after,
+.home-publication-card__cite:hover::after,
+.home-publications__all:hover::after {
+  width: 100%;
+}
+
+.home-publications__all {
+  display: inline-block;
+  margin-top: 1.7rem;
+}
+
+.home-publications__all span {
+  display: inline-block;
+
+  transition: transform 200ms ease;
+}
+
+.home-publications__all:hover span {
+  transform: translate(2px, -2px);
+}
+
+/* Hidden BibTeX source used by the Cite button */
+
+.home-publication-card__bibtex {
+  display: none;
+}
+
+/* ---------- Publication card responsive ---------- */
+
+@media (max-width: 700px) {
+  .home-publication-card__preview {
+    max-width: 100%;
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .home-publications {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    padding: 5rem 2rem 6rem;
+  }
+
+  .home-publications__heading {
+    position: static;
+  }
+
+  .home-publications__heading h2 br {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-publications {
+    padding: 4rem 1.35rem 5rem;
+  }
+
+}

@@ -121,4 +121,56 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   updateActiveFromScroll();
+
+  document.querySelectorAll(".home-publication-card__cite").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const card = button.closest(".home-publication-card");
+    const source = card?.querySelector(".home-publication-card__bibtex");
+
+    if (!source) return;
+
+    const text = source.value.trim();
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const temp = document.createElement("textarea");
+        temp.value = text;
+        temp.style.position = "fixed";
+        temp.style.opacity = "0";
+
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        temp.remove();
+      }
+
+
+button.textContent = "Copied ✓";
+
+window.setTimeout(() => {
+  button.textContent = originalText;
+}, 1300);const originalText = button.textContent;
+
+button.classList.add("is-changing");
+
+window.setTimeout(() => {
+  button.textContent = "Copied ✓";
+  button.classList.remove("is-changing");
+}, 160);
+
+window.setTimeout(() => {
+  button.classList.add("is-changing");
+
+  window.setTimeout(() => {
+    button.textContent = originalText;
+    button.classList.remove("is-changing");
+  }, 160);
+}, 1250);
+    } catch (error) {
+      console.error("Could not copy BibTeX:", error);
+    }
+  });
+});
 });
