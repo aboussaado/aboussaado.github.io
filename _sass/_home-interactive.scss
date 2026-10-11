@@ -21,7 +21,14 @@ html[data-theme="dark"] {
 
 .home-interactive {
   width: 100%;
-  overflow-x: hidden;
+
+  /*
+   * `hidden` creates a scroll container and prevents the
+   * section headings from sticking to the viewport.
+   * `clip` keeps horizontal overflow invisible without
+   * breaking position: sticky.
+   */
+  overflow-x: clip;
 }
 
 /* =========================================================
@@ -1839,3 +1846,55 @@ html[data-theme="dark"] {
   display: inline-block;
   white-space: nowrap;
 }
+
+
+/* === Homepage unified sticky left column === */
+
+
+/*
+ * Same behaviour as .cv-section__heading:
+ *
+ * the left title remains fixed while the user moves through
+ * the content belonging to that section, then naturally
+ * leaves when the next section takes over.
+ */
+
+@media (min-width: 901px) {
+
+  .home-latest__heading,
+  .home-research__sticky,
+  .home-experience__heading,
+  .home-publications__heading,
+  .home-background__heading {
+    position: sticky !important;
+
+    top: 7rem !important;
+
+    align-self: start !important;
+
+    height: fit-content;
+  }
+
+}
+
+
+/*
+ * No sticky column on tablet/mobile.
+ */
+
+@media (max-width: 900px) {
+
+  .home-latest__heading,
+  .home-research__sticky,
+  .home-experience__heading,
+  .home-publications__heading,
+  .home-background__heading {
+    position: static !important;
+
+    top: auto !important;
+
+    height: auto;
+  }
+
+}
+

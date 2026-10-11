@@ -534,3 +534,105 @@ html[data-theme="dark"] .lorenz-63__glow {
   stroke-width: 1.35;
 }
 
+
+/* === Lorenz composited motion === */
+
+/*
+ * The trajectory itself is no longer recomputed every frame.
+ * Only this tiny composited transform moves.
+ */
+.lorenz-63 {
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .publications-page__lorenz.is-ready
+  .lorenz-63 {
+    animation:
+      lorenz-composited-drift
+      18s
+      ease-in-out
+      4s
+      infinite
+      alternate;
+  }
+}
+
+
+@keyframes lorenz-composited-drift {
+  from {
+    transform:
+      translate3d(-1px, 1px, 0)
+      rotate(-0.18deg)
+      scale(0.998);
+  }
+
+  to {
+    transform:
+      translate3d(2px, -2px, 0)
+      rotate(0.22deg)
+      scale(1.003);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .lorenz-63 {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+
+
+/* === Static scientific illustrations === */
+
+.lorenz-63,
+.rossler-attractor,
+.lorenz-63__curve,
+.lorenz-63__glow,
+.rossler-attractor__curve,
+.rossler-attractor__glow {
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.lorenz-63__curve,
+.lorenz-63__glow,
+.rossler-attractor__curve,
+.rossler-attractor__glow {
+  stroke-dasharray: none !important;
+  stroke-dashoffset: 0 !important;
+}
+
+.lorenz-63,
+.rossler-attractor {
+  will-change: auto !important;
+}
+
+
+/* === Lorenz static soft reveal === */
+
+.publications-page__lorenz {
+  opacity: 0;
+
+  transition:
+    opacity 850ms cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+
+.publications-page__lorenz.is-ready {
+  opacity: 1;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .publications-page__lorenz {
+    opacity: 1;
+    transition: none !important;
+  }
+}
+

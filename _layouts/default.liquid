@@ -13,7 +13,9 @@
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
     {% include head.liquid %}
-  </head>
+    <script>document.documentElement.classList.add("site-reveal-enabled");</script>
+  <script defer src="{{ '/assets/js/site-transitions.js' | relative_url }}"></script>
+</head>
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
@@ -52,5 +54,5 @@
 
     <!-- JavaScripts -->
     {% include scripts.liquid %}
-  </body>
+</body>
 </html>

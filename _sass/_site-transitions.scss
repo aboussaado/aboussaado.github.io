@@ -1,0 +1,1141 @@
+
+/* =========================================================
+   SITE TRANSITIONS
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Smooth anchors
+   --------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   PAGE-TO-PAGE TRANSITION
+   ========================================================= */
+
+html.site-reveal-enabled body {
+  opacity: 0;
+
+  transition:
+    opacity 380ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+html.site-reveal-enabled.site-page-ready body {
+  opacity: 1;
+}
+
+
+html.site-reveal-enabled.site-is-leaving body {
+  opacity: 0;
+}
+
+
+/* =========================================================
+   BIDIRECTIONAL SCROLL REVEAL
+   ========================================================= */
+
+/*
+ * Important:
+ *
+ * We now reveal WHOLE semantic blocks rather than every
+ * paragraph independently.
+ *
+ * Example:
+ *
+ * 2025–26
+ * Université Paris-Dauphine – PSL
+ * Master's Degree...
+ * Paris, France
+ * description
+ * bullets
+ *
+ * all move/fade together.
+ */
+
+.site-reveal-item {
+  opacity: 0;
+
+  transform:
+    translate3d(0, 15px, 0);
+
+  transition:
+    opacity 1100ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  transition-delay:
+    var(--site-reveal-delay, 0ms);
+}
+
+
+.site-reveal-item.is-revealed {
+  opacity: 1;
+
+  transform:
+    translate3d(0, 0, 0);
+}
+
+
+/* =========================================================
+   PAGE HERO ENTRANCES
+   Publications + CV
+   ========================================================= */
+
+/*
+ * Same visual language as the homepage hero:
+ * restrained upward arrival with opacity.
+ *
+ * These are NOT scroll animations.
+ * They happen once when the page appears.
+ */
+
+.publications-page__header-copy,
+.publications-page__lorenz,
+.cv-page__hero-copy,
+.cv-page__rossler,
+.cv-page__meta {
+  opacity: 0 !important;
+
+  transform:
+    translate3d(0, 24px, 0) !important;
+
+  transition:
+    opacity 1050ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1050ms cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+
+/*
+ * Slight stagger gives the composition the same kind of
+ * layered entrance as text + portrait on the homepage.
+ */
+
+.publications-page__lorenz,
+.cv-page__rossler {
+  transition-delay: 110ms !important;
+}
+
+
+.cv-page__meta {
+  transition-delay: 180ms !important;
+}
+
+
+html.site-page-ready
+.publications-page__header-copy,
+
+html.site-page-ready
+.publications-page__lorenz,
+
+html.site-page-ready
+.cv-page__hero-copy,
+
+html.site-page-ready
+.cv-page__rossler,
+
+html.site-page-ready
+.cv-page__meta {
+  opacity: 1 !important;
+
+  transform:
+    translate3d(0, 0, 0) !important;
+}
+
+
+/* =========================================================
+   SCIENTIFIC ILLUSTRATIONS
+   Completely static after entrance
+   ========================================================= */
+
+.lorenz-63,
+.rossler-attractor,
+.lorenz-63__curve,
+.lorenz-63__glow,
+.rossler-attractor__curve,
+.rossler-attractor__glow {
+  animation: none !important;
+
+  transform: none !important;
+
+  stroke-dasharray: none !important;
+  stroke-dashoffset: 0 !important;
+
+  will-change: auto !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+:root {
+  --site-footer-accent: #a31f34;
+}
+
+
+html[data-theme="dark"] {
+  --site-footer-accent: #4147ff;
+}
+
+
+/*
+ * al-folio normally allows a fixed-bottom footer.
+ * On this site it should participate in normal document
+ * flow and appear only after the final section.
+ */
+
+footer,
+footer.fixed-bottom {
+  position: static !important;
+
+  inset: auto !important;
+
+  width: 100%;
+
+  margin: 0 !important;
+
+  background:
+    var(--site-footer-accent) !important;
+
+  border: 0 !important;
+
+  color: #ffffff !important;
+}
+
+
+/*
+ * Remove space reserved by the theme for a fixed footer.
+ */
+
+body {
+  padding-bottom: 0 !important;
+}
+
+
+footer .container,
+footer .container-fluid {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+
+footer,
+footer *,
+footer a,
+footer a:hover {
+  color: #ffffff !important;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+
+  html.site-reveal-enabled body {
+    opacity: 1 !important;
+
+    transition: none !important;
+  }
+
+
+  .site-reveal-item,
+  .publications-page__header-copy,
+  .publications-page__lorenz,
+  .cv-page__hero-copy,
+  .cv-page__rossler,
+  .cv-page__meta {
+    opacity: 1 !important;
+
+    transform: none !important;
+
+    transition: none !important;
+  }
+
+}
+
+
+/* === FINAL EDITORIAL NAVBAR === */
+
+
+/* =========================================================
+   EDITORIAL OVERLINE NAVIGATION
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Navbar shell
+   --------------------------------------------------------- */
+
+nav.navbar,
+nav.navbar.fixed-top,
+nav.navbar.sticky-top {
+  position: relative !important;
+  top: auto !important;
+
+  width: 100%;
+
+  min-height: 70px;
+
+  margin: 0;
+
+  padding: 0.95rem 0 0.8rem;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  box-shadow: none !important;
+
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+
+/*
+ * No space reserved for a fixed navbar.
+ */
+body {
+  padding-top: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   Alignment
+   --------------------------------------------------------- */
+
+nav.navbar > .container,
+nav.navbar > .container-fluid {
+  width:
+    min(
+      1600px,
+      calc(100% - 6rem)
+    );
+
+  max-width: none !important;
+
+  margin: 0 auto;
+
+  padding: 0 !important;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   NAME
+   ========================================================= */
+
+nav.navbar .navbar-brand {
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif !important;
+
+  font-size:
+    1.46rem !important;
+
+  font-weight:
+    400 !important;
+
+  line-height: 1;
+
+  letter-spacing:
+    -0.022em;
+
+  color:
+    var(--global-text-color) !important;
+
+  text-decoration:
+    none !important;
+
+  opacity: 0;
+
+  transform:
+    translate3d(0, 7px, 0);
+
+  transition:
+    opacity 780ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 780ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 220ms ease;
+}
+
+
+html.site-page-ready
+nav.navbar .navbar-brand {
+  opacity: 1;
+
+  transform:
+    translate3d(0, 0, 0);
+}
+
+
+nav.navbar .navbar-brand:hover {
+  color:
+    var(--global-theme-color) !important;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav.navbar .navbar-nav {
+  align-items: center;
+
+  gap: 0.35rem;
+}
+
+
+/*
+ * Individual item entrance.
+ */
+
+nav.navbar .nav-item {
+  opacity: 0;
+
+  transform:
+    translate3d(0, 7px, 0);
+
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+html.site-page-ready
+nav.navbar .nav-item {
+  opacity: 1;
+
+  transform:
+    translate3d(0, 0, 0);
+}
+
+
+nav.navbar .nav-item:nth-child(1) {
+  transition-delay: 55ms;
+}
+
+nav.navbar .nav-item:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+nav.navbar .nav-item:nth-child(3) {
+  transition-delay: 145ms;
+}
+
+nav.navbar .nav-item:nth-child(4) {
+  transition-delay: 190ms;
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+nav.navbar
+.nav-item:not(.toggle-container)
+.nav-link {
+  position: relative;
+
+  display: inline-block;
+
+  padding:
+    0.8rem
+    0.72rem
+    0.45rem !important;
+
+  font-family:
+    "Poppins",
+    sans-serif !important;
+
+  font-size:
+    0.82rem !important;
+
+  font-weight:
+    400 !important;
+
+  line-height: 1;
+
+  letter-spacing:
+    -0.012em;
+
+  color:
+    var(--global-text-color-light) !important;
+
+  text-decoration:
+    none !important;
+
+  transform:
+    translate3d(0, 0, 0);
+
+  transform-origin:
+    center center;
+
+  transition:
+    color 220ms ease,
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    letter-spacing 240ms ease;
+}
+
+
+/* =========================================================
+   THICK GRADUAL OVERLINE
+   ========================================================= */
+
+/*
+ * Accent line is ABOVE the label.
+ * It grows left -> right.
+ */
+
+nav.navbar
+.nav-item:not(.toggle-container)
+.nav-link::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0.72rem;
+  right: 0.72rem;
+
+  top: 0.18rem;
+
+  height: 3px;
+
+  border-radius: 999px;
+
+  background:
+    var(--global-theme-color);
+
+  transform:
+    scaleX(0);
+
+  transform-origin:
+    right center;
+
+  transition:
+    transform 320ms
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* ---------------------------------------------------------
+   Hover
+   --------------------------------------------------------- */
+
+nav.navbar
+.nav-item:not(.toggle-container)
+.nav-link:hover {
+  color:
+    var(--global-theme-color) !important;
+
+  transform:
+    translate3d(0, -2px, 0)
+    scale(1.035);
+
+  letter-spacing:
+    -0.004em;
+}
+
+
+nav.navbar
+.nav-item:not(.toggle-container)
+.nav-link:hover::before {
+  transform:
+    scaleX(1);
+
+  transform-origin:
+    left center;
+}
+
+
+/* =========================================================
+   ACTIVE PAGE
+   ========================================================= */
+
+nav.navbar
+.nav-item.active
+> .nav-link,
+
+nav.navbar
+.nav-link.active {
+  color:
+    var(--global-theme-color) !important;
+
+  font-weight:
+    500 !important;
+}
+
+
+nav.navbar
+.nav-item.active
+> .nav-link::before,
+
+nav.navbar
+.nav-link.active::before {
+  transform:
+    scaleX(1);
+
+  transform-origin:
+    left center;
+}
+
+
+/* =========================================================
+   OPTIONAL SUBTLE HOVER EMPHASIS
+   ========================================================= */
+
+/*
+ * When one navigation item is hovered,
+ * nearby links recede just slightly.
+ */
+
+nav.navbar .navbar-nav:hover
+.nav-item:not(.toggle-container)
+.nav-link {
+  opacity: 0.56;
+}
+
+
+nav.navbar .navbar-nav
+.nav-item:not(.toggle-container)
+.nav-link:hover {
+  opacity: 1;
+}
+
+
+/*
+ * Active page should never disappear visually.
+ */
+
+nav.navbar .navbar-nav:hover
+.nav-item.active
+> .nav-link,
+
+nav.navbar .navbar-nav:hover
+.nav-link.active {
+  opacity: 0.82;
+}
+
+
+nav.navbar .navbar-nav:hover
+.nav-item.active
+> .nav-link:hover,
+
+nav.navbar .navbar-nav:hover
+.nav-link.active:hover {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   THEME TOGGLE
+   ========================================================= */
+
+nav.navbar .toggle-container {
+  margin-left:
+    0.15rem;
+}
+
+
+nav.navbar #light-toggle {
+  width: 31px;
+  height: 31px;
+
+  padding: 0 !important;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 0 !important;
+
+  border-radius: 50%;
+
+  background:
+    transparent !important;
+
+  color:
+    var(--global-text-color-light) !important;
+
+  box-shadow:
+    none !important;
+
+  transition:
+    color 200ms ease,
+    background-color 200ms ease,
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+nav.navbar #light-toggle:hover {
+  color:
+    var(--global-theme-color) !important;
+
+  background:
+    var(--global-card-bg-color) !important;
+
+  transform:
+    rotate(10deg)
+    scale(1.08);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  nav.navbar {
+    min-height:
+      auto;
+
+    padding:
+      1rem 0;
+  }
+
+
+  nav.navbar > .container,
+  nav.navbar > .container-fluid {
+    width:
+      calc(100% - 2.6rem);
+  }
+
+
+  nav.navbar .navbar-brand {
+    font-size:
+      1.28rem !important;
+  }
+
+
+  nav.navbar
+  .nav-item:not(.toggle-container)
+  .nav-link {
+    padding:
+      0.7rem
+      0.6rem !important;
+
+    font-size:
+      0.8rem !important;
+  }
+
+
+  nav.navbar
+  .nav-item:not(.toggle-container)
+  .nav-link::before {
+    top:
+      0.15rem;
+
+    left:
+      0.6rem;
+
+    right:
+      0.6rem;
+  }
+
+}
+
+
+/* =========================================================
+   Reduced motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  nav.navbar .navbar-brand,
+  nav.navbar .nav-item,
+  nav.navbar .nav-link,
+  nav.navbar .nav-link::before,
+  nav.navbar #light-toggle {
+    transition:
+      none !important;
+  }
+
+
+  nav.navbar .navbar-brand,
+  nav.navbar .nav-item {
+    opacity:
+      1 !important;
+
+    transform:
+      none !important;
+  }
+
+
+  nav.navbar .nav-link:hover,
+  nav.navbar #light-toggle:hover {
+    transform:
+      none !important;
+  }
+
+}
+
+
+/* === NAVBAR FINAL POLISH === */
+
+/* ---------------------------------
+   1) NAME / BRAND: same behaviour
+   --------------------------------- */
+
+nav.navbar .navbar-brand {
+  position: relative;
+  display: inline-block;
+
+  padding-top: 0.65rem;
+  padding-bottom: 0.35rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  color: var(--global-text-color) !important;
+
+  transition:
+    color 220ms ease,
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease;
+}
+
+nav.navbar .navbar-brand::after {
+  display: none !important;
+}
+
+nav.navbar .navbar-brand:hover,
+nav.navbar .navbar-brand:focus-visible {
+  color: var(--global-theme-color) !important;
+  transform: translate3d(0, -2px, 0);
+  text-decoration: none !important;
+}
+
+
+/* ---------------------------------
+   2) NAV LINKS: stronger top accent
+   --------------------------------- */
+
+nav.navbar .nav-item:not(.toggle-container) .nav-link::before {
+  top: -0.28rem !important;
+  height: 4px !important;
+  border-radius: 999px !important;
+}
+
+
+/* ---------------------------------
+   4) Hover text should stand out more
+   --------------------------------- */
+
+nav.navbar .nav-item:not(.toggle-container) .nav-link:hover,
+nav.navbar .nav-item:not(.toggle-container) .nav-link:focus-visible {
+  color: var(--global-theme-color) !important;
+  opacity: 1 !important;
+  transform: translateY(-2px) scale(1.035);
+}
+
+/* Keep neighbouring links slightly faded on group hover */
+nav.navbar .navbar-nav:hover .nav-item:not(.toggle-container) .nav-link {
+  opacity: 0.58;
+}
+
+nav.navbar .navbar-nav .nav-item:not(.toggle-container) .nav-link:hover,
+nav.navbar .navbar-nav .nav-item:not(.toggle-container) .nav-link:focus-visible {
+  opacity: 1;
+}
+
+/* Active page stays clearly visible */
+nav.navbar .nav-item.active > .nav-link,
+nav.navbar .nav-link.active {
+  opacity: 1 !important;
+}
+
+
+/* ---------------------------------
+   5) Reduced motion safety
+   --------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  nav.navbar .navbar-brand,
+  nav.navbar .nav-link,
+  nav.navbar .nav-link::before {
+    transition: none !important;
+  }
+
+  nav.navbar .navbar-brand:hover,
+  nav.navbar .nav-item:not(.toggle-container) .nav-link:hover {
+    transform: none !important;
+  }
+}
+
+
+/* === FINAL NAVBAR / PROGRESS FIX === */
+
+
+/* =========================================================
+   BRAND
+   No line. Only a restrained upward translation.
+   ========================================================= */
+
+nav.navbar .navbar-brand::before,
+nav.navbar .navbar-brand::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+nav.navbar .navbar-brand:hover,
+nav.navbar .navbar-brand:focus-visible {
+  color:
+    var(--global-theme-color) !important;
+
+  transform:
+    translate3d(0, -2px, 0) !important;
+
+  text-decoration:
+    none !important;
+}
+
+
+/* =========================================================
+   REAL SCROLL PROGRESS BAR
+   ========================================================= */
+
+/*
+ * The theme uses:
+ *
+ *   <progress id="progress">
+ *
+ * This is completely independent from the navbar.
+ *
+ * It now lives against the absolute top edge of the
+ * viewport and remains there as the navbar scrolls away.
+ */
+
+#progress {
+  position:
+    fixed !important;
+
+  top:
+    0 !important;
+
+  left:
+    0 !important;
+
+  right:
+    0 !important;
+
+  width:
+    100% !important;
+
+  height:
+    6px !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+
+  border:
+    0 !important;
+
+  border-radius:
+    0 !important;
+
+  background:
+    transparent !important;
+
+  z-index:
+    10000 !important;
+
+  -webkit-appearance:
+    none !important;
+
+  appearance:
+    none !important;
+}
+
+
+/* Empty part of the bar */
+
+#progress::-webkit-progress-bar {
+  background:
+    transparent !important;
+
+  border-radius:
+    0 !important;
+}
+
+
+/* Filled part — Chrome / Safari */
+
+#progress::-webkit-progress-value {
+  background:
+    var(--global-theme-color) !important;
+
+  border-radius:
+    0 !important;
+}
+
+
+/* Filled part — Firefox */
+
+#progress::-moz-progress-bar {
+  background:
+    var(--global-theme-color) !important;
+
+  border-radius:
+    0 !important;
+}
+
+
+/* =========================================================
+   Legacy fallback
+   ========================================================= */
+
+#progress .progress-container {
+  position:
+    fixed !important;
+
+  top:
+    0 !important;
+
+  left:
+    0 !important;
+
+  width:
+    100% !important;
+
+  height:
+    6px !important;
+
+  background:
+    transparent !important;
+}
+
+
+#progress .progress-container .progress-bar {
+  height:
+    6px !important;
+
+  background:
+    var(--global-theme-color) !important;
+}
+
+
+/* =========================================================
+   Reduced motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  nav.navbar .navbar-brand:hover,
+  nav.navbar .navbar-brand:focus-visible {
+    transform:
+      none !important;
+  }
+
+}
+
+
+/* === FINAL PAGE FADE === */
+
+
+/* ---------------------------------------------------------
+   Page entrance
+   --------------------------------------------------------- */
+
+html.site-reveal-enabled main {
+  opacity: 0;
+
+  transform:
+    translate3d(0, 8px, 0);
+
+  transition:
+    opacity 520ms
+    cubic-bezier(0.22, 1, 0.36, 1),
+
+    transform 520ms
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+html.site-reveal-enabled.site-page-ready main {
+  opacity: 1;
+
+  transform:
+    translate3d(0, 0, 0);
+}
+
+
+/* ---------------------------------------------------------
+   Page exit
+   --------------------------------------------------------- */
+
+html.site-is-leaving main {
+  opacity: 0 !important;
+
+  transform:
+    translate3d(0, -4px, 0) !important;
+
+  transition:
+    opacity 220ms ease,
+
+    transform 220ms
+    cubic-bezier(0.4, 0, 1, 1) !important;
+}
+
+
+/*
+ * Navbar follows very slightly.
+ */
+
+html.site-is-leaving nav.navbar {
+  opacity: 0.78;
+
+  transform:
+    translate3d(0, -2px, 0);
+
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+
+/* ---------------------------------------------------------
+   Do not interfere with the real scroll progress bar
+   --------------------------------------------------------- */
+
+#progress {
+  opacity: 1;
+}
+
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html.site-reveal-enabled main,
+  html.site-reveal-enabled.site-page-ready main,
+  html.site-is-leaving main,
+  html.site-is-leaving nav.navbar {
+    opacity: 1 !important;
+
+    transform: none !important;
+
+    transition: none !important;
+  }
+
+}
+
