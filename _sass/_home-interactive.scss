@@ -1602,3 +1602,39 @@ html[data-theme="dark"] {
   }
 
 }
+
+/* =========================================================
+   Final mobile polish
+   ========================================================= */
+
+@media (max-width: 900px) {
+  /* Keep Selected Publications on two lines */
+  .home-publications__heading h2 br {
+    display: block;
+  }
+
+  /* Footer should not cover the page on mobile/tablet */
+  .home-main ~ footer.fixed-bottom {
+    position: static !important;
+  }
+
+  body:has(.home-main) {
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-publications__heading h2 {
+    font-size: 3rem;
+    line-height: 0.95;
+  }
+
+  .home-publication-card__title {
+    font-size: 2.15rem;
+    line-height: 1.02;
+  }
+
+  #back-to-top {
+    display: none !important;
+  }
+}
