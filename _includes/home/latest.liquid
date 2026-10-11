@@ -1,0 +1,25 @@
+<section class="home-latest" id="latest">
+  <div class="home-latest__heading">
+    <span class="home-section-number">01</span>
+    <h2>Latest</h2>
+  </div>
+
+  <div class="home-latest__list">
+    {% assign latest_news = site.news | where_exp: "item", "item.published != false" | sort: "date" | reverse %}
+
+    {% for item in latest_news limit: 3 %}
+      <article class="home-latest__item">
+        <time
+          class="home-latest__date"
+          datetime="{{ item.date | date_to_xmlschema }}"
+        >
+          {{ item.date | date: "%b %Y" }}
+        </time>
+
+        <div class="home-latest__content">
+          {{ item.content | markdownify }}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

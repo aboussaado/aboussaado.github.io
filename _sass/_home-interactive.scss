@@ -354,3 +354,130 @@ html[data-theme="dark"] {
     width: min(82%, 280px);
   }
 }
+
+/* =========================================================
+   Latest
+   ========================================================= */
+
+.home-latest {
+  max-width: var(--home-section-width);
+  margin: 0 auto;
+  padding: 5rem 3rem 7rem;
+
+  display: grid;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.6fr);
+  gap: clamp(3rem, 8vw, 7rem);
+
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.home-latest__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.home-section-number {
+  margin-bottom: 0.65rem;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+
+  color: var(--home-graphic-accent);
+}
+
+.home-latest__heading h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 1;
+
+  color: var(--global-text-color);
+}
+
+.home-latest__list {
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.home-latest__item {
+  display: grid;
+  grid-template-columns: 95px minmax(0, 1fr);
+  gap: 1.6rem;
+
+  padding: 1.5rem 0;
+
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.home-latest__date {
+  padding-top: 0.15rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.015em;
+
+  color: var(--global-text-color-light);
+}
+
+.home-latest__content {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.22rem;
+  font-weight: 300;
+  line-height: 1.58;
+  letter-spacing: -0.01em;
+
+  color: var(--global-text-color);
+}
+
+.home-latest__content p {
+  margin: 0;
+}
+
+.home-latest__content a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+
+  background-image: linear-gradient(
+    var(--global-theme-color),
+    var(--global-theme-color)
+  );
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 1px;
+
+  transition:
+    background-size 240ms ease,
+    color 180ms ease;
+}
+
+.home-latest__content a:hover {
+  color: var(--global-theme-color);
+  background-size: 100% 1px;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .home-latest {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+
+    padding: 4rem 2rem 5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-latest {
+    padding: 3.5rem 1.35rem 4.5rem;
+  }
+
+  .home-latest__item {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+}
