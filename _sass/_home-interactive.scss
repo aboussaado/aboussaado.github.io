@@ -481,3 +481,228 @@ html[data-theme="dark"] {
     gap: 0.55rem;
   }
 }
+
+/* =========================================================
+   Research
+   ========================================================= */
+
+.home-research {
+  max-width: var(--home-section-width);
+  margin: 0 auto;
+  padding: 7rem 3rem 9rem;
+
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(4rem, 9vw, 8rem);
+
+  border-top: 1px solid var(--global-divider-color);
+}
+
+/* ---------- Left panel ---------- */
+
+.home-research__sticky {
+  position: sticky;
+  top: 9rem;
+}
+
+.home-research__left h2 {
+  margin: 0 0 4rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 4.5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+
+  color: var(--global-text-color);
+}
+
+.home-research__preview {
+  max-width: 390px;
+}
+
+.home-research__preview-index {
+  display: block;
+  margin-bottom: 0.8rem;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+
+  color: var(--home-graphic-accent);
+}
+
+.home-research__preview-title {
+  margin: 0 0 1rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.8rem, 2.7vw, 2.55rem);
+  font-weight: 400;
+  line-height: 1.08;
+
+  color: var(--global-text-color);
+}
+
+.home-research__preview-text {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.18rem;
+  font-weight: 300;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+
+  color: var(--global-text-color-light);
+}
+
+.home-research__preview-index,
+.home-research__preview-title,
+.home-research__preview-text {
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.home-research__preview.is-changing
+  .home-research__preview-index,
+.home-research__preview.is-changing
+  .home-research__preview-title,
+.home-research__preview.is-changing
+  .home-research__preview-text {
+  opacity: 0;
+  transform: translateY(3px);
+}
+
+/* ---------- Research axes ---------- */
+
+.home-research__axes {
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.home-research__axis {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 1.5rem;
+
+  padding: 2.2rem 0;
+
+  border-bottom: 1px solid var(--global-divider-color);
+
+  cursor: pointer;
+
+  transition:
+    transform 220ms ease,
+    opacity 220ms ease;
+}
+
+.home-research__axis-number {
+  padding-top: 0.4rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+
+  color: var(--global-text-color-light);
+
+  transition: color 200ms ease;
+}
+
+.home-research__axis h3 {
+  margin: 0 0 0.7rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 400;
+  line-height: 1.05;
+
+  color: var(--global-text-color);
+
+  transition:
+    color 200ms ease,
+    transform 220ms ease;
+}
+
+.home-research__axis p {
+  max-width: 590px;
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+
+  color: var(--global-text-color-light);
+}
+
+.home-research__axis:hover h3,
+.home-research__axis.is-active h3 {
+  color: var(--global-theme-color);
+  transform: translateX(5px);
+}
+
+.home-research__axis:hover .home-research__axis-number,
+.home-research__axis.is-active .home-research__axis-number {
+  color: var(--home-graphic-accent);
+}
+
+/* subtle active marker */
+
+.home-research__axis::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--home-graphic-accent);
+
+  transition: width 280ms ease;
+}
+
+.home-research__axis:hover::after,
+.home-research__axis.is-active::after {
+  width: 100%;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .home-research {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    padding: 5rem 2rem 6rem;
+  }
+
+  .home-research__sticky {
+    position: static;
+  }
+
+  .home-research__left h2 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-research {
+    padding: 4rem 1.35rem 5rem;
+  }
+
+  .home-research__axis {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 1rem;
+
+    padding: 1.7rem 0;
+  }
+
+  .home-research__preview-title {
+    font-size: 2rem;
+  }
+}
