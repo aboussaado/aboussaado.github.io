@@ -208,22 +208,29 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const updateActiveSection = () => {
-    const targetY = window.innerHeight * 0.45;
+    const triggerY = Math.min(140, window.innerHeight * 0.2);
 
-    let closest = sections[0];
-    let closestDistance = Infinity;
+    // At the very bottom of the page, Contact must stay active.
+    const atBottom =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 4;
+
+    if (atBottom) {
+      setActiveSection(sections[sections.length - 1].id);
+      return;
+    }
+
+    let active = sections[0];
 
     sections.forEach((item) => {
       const rect = item.section.getBoundingClientRect();
-      const distance = Math.abs(rect.top - targetY);
 
-      if (distance < closestDistance) {
-        closest = item;
-        closestDistance = distance;
+      if (rect.top <= triggerY) {
+        active = item;
       }
     });
 
-    setActiveSection(closest.id);
+    setActiveSection(active.id);
   };
 
   let ticking = false;
@@ -243,5 +250,142 @@ document.addEventListener("DOMContentLoaded", () => {
     { passive: true }
   );
 
+
+  /* precise section-nav clicks */
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const id = link.dataset.section;
+      const section = document.getElementById(id);
+
+      if (!section) return;
+
+      const headerOffset = 80;
+
+      const top =
+        section.getBoundingClientRect().top +
+        window.scrollY -
+        headerOffset;
+
+      setActiveSection(id);
+
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
+
+      history.replaceState(null, "", `#${id}`);
+    });
+  });
+
   updateActiveSection();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const groups = [
+    {
+      root: ".home-latest",
+      item: ".home-latest__item",
+    },
+    {
+      root: ".home-experience",
+      item: ".home-experience__item",
+    },
+    {
+      root: ".home-background",
+      item: ".home-background__item",
+    },
+  ];
+
+  const preparedGroups = groups
+    .map(({ root, item }) => {
+      const container = document.querySelector(root);
+
+      if (!container) return null;
+
+      const items = Array.from(container.querySelectorAll(item));
+
+      if (!items.length) return null;
+
+      return {
+        container,
+        items,
+      };
+    })
+    .filter(Boolean);
+
+  if (!preparedGroups.length) return;
+
+  const setActive = (group, activeItem) => {
+    group.items.forEach((item) => {
+      item.classList.toggle("is-active", item === activeItem);
+    });
+  };
+
+  const updateGroup = (group) => {
+    const containerRect = group.container.getBoundingClientRect();
+
+    const isVisible =
+      containerRect.bottom > 0 &&
+      containerRect.top < window.innerHeight;
+
+    if (!isVisible) return;
+
+    const targetY = window.innerHeight * 0.46;
+
+    let closestItem = group.items[0];
+    let closestDistance = Infinity;
+
+    group.items.forEach((item) => {
+      const rect = item.getBoundingClientRect();
+
+      const itemCenter = rect.top + rect.height / 2;
+      const distance = Math.abs(itemCenter - targetY);
+
+      if (distance < closestDistance) {
+        closestItem = item;
+        closestDistance = distance;
+      }
+    });
+
+    setActive(group, closestItem);
+  };
+
+  const updateAllGroups = () => {
+    preparedGroups.forEach(updateGroup);
+  };
+
+  preparedGroups.forEach((group) => {
+    group.items.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        setActive(group, item);
+      });
+
+      item.addEventListener("mouseleave", () => {
+        updateGroup(group);
+      });
+    });
+  });
+
+  let ticking = false;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (ticking) return;
+
+      ticking = true;
+
+      window.requestAnimationFrame(() => {
+        updateAllGroups();
+        ticking = false;
+      });
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("resize", updateAllGroups);
+
+  updateAllGroups();
 });
