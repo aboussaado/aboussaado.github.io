@@ -134,3 +134,12 @@ blockquote {
     }
   }
 }
+
+/* Global type system */
+body,
+button,
+input,
+textarea,
+select {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}

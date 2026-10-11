@@ -1,0 +1,289 @@
+/* =========================================================
+   Interactive homepage
+   ========================================================= */
+
+/* Homepage-specific design tokens */
+:root {
+  --home-graphic-accent: #a31f34;
+  --home-section-width: 1180px;
+}
+
+html[data-theme="dark"] {
+  --home-graphic-accent: #0000cd;
+}
+
+/* Full-width wrapper used only by the homepage */
+.home-main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home-interactive {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
+
+.home-hero {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: var(--home-section-width);
+  margin: 0 auto;
+  padding: 5rem 3rem 4rem;
+}
+
+.home-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.75fr);
+  gap: clamp(3.5rem, 6vw, 6.5rem);
+  align-items: center;
+}
+
+/* ---------- Text ---------- */
+
+.home-hero__content {
+  max-width: 760px;
+}
+
+.home-hero__title {
+  margin: 0 0 1.15rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--global-text-color);
+
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+.home-hero__title-intro {
+  display: block;
+
+  font-size: clamp(3rem, 4.6vw, 4.5rem);
+  font-weight: 500;
+}
+
+.home-hero__title-name {
+  display: block;
+
+  font-size: clamp(3.8rem, 5.7vw, 5.6rem);
+  font-weight: 500;
+}
+
+.home-hero__statement {
+  max-width: 690px;
+  margin: 0 0 1.35rem;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.3rem, 1.8vw, 1.7rem);
+  font-weight: 500;
+  line-height: 1.42;
+  letter-spacing: -0.02em;
+
+  color: var(--global-text-color);
+}
+
+.home-hero__field {
+  margin: 0 0 1.8rem;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+
+  color: var(--home-graphic-accent);
+}
+
+.home-hero__affiliations {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.home-hero__affiliations p {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  color: var(--global-text-color-light);
+}
+
+
+/* ---------- Portrait ---------- */
+
+.home-hero__title-intro {
+  font-size: clamp(2.6rem, 7vw, 3.7rem);
+}
+
+.home-hero__title-name {
+  font-size: clamp(3.2rem, 9vw, 4.6rem);
+}
+
+.home-hero__portrait {
+  position: relative;
+
+  width: min(100%, 330px);
+  justify-self: end;
+
+  padding: 1rem;
+}
+
+.home-hero__portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: 6px;
+  object-fit: cover;
+
+  position: relative;
+  z-index: 2;
+}
+
+.home-hero__portrait::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 38%;
+  height: 25%;
+
+  border-top: 2px solid var(--home-graphic-accent);
+  border-left: 2px solid var(--home-graphic-accent);
+  border-top-left-radius: 14px;
+
+  z-index: 1;
+}
+
+.home-hero__portrait::after {
+  content: "";
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 40%;
+  height: 23%;
+
+  border-right: 2px solid var(--home-graphic-accent);
+  border-bottom: 2px solid var(--home-graphic-accent);
+  border-bottom-right-radius: 14px;
+
+  z-index: 1;
+}
+
+/* ---------- Explore ---------- */
+
+.home-hero__explore {
+  position: absolute;
+  bottom: 1.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: var(--global-text-color-light);
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.home-hero__explore:hover {
+  color: var(--global-theme-color);
+  text-decoration: none;
+  transform: translate(-50%, -2px);
+}
+
+/* =========================================================
+   Small entry animation
+   ========================================================= */
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__content {
+    animation: home-fade-up 550ms ease both;
+  }
+
+  .home-hero__portrait {
+    animation: home-fade-up 550ms 100ms ease both;
+  }
+
+  @keyframes home-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .home-hero {
+    min-height: auto;
+    padding: 5rem 2rem 5rem;
+  }
+
+  .home-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .home-hero__portrait {
+    width: min(70%, 300px);
+    justify-self: start;
+  }
+
+  .home-hero__explore {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-hero {
+    padding: 3.5rem 1.35rem 4rem;
+  }
+
+  .home-hero__title {
+    font-size: clamp(3rem, 14vw, 4.3rem);
+  }
+
+  .home-hero__statement {
+    font-size: 1.2rem;
+  }
+
+  .home-hero__field {
+    font-size: 0.8rem;
+  }
+
+  .home-hero__portrait {
+    width: min(82%, 280px);
+  }
+}
