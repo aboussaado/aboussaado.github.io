@@ -1617,7 +1617,14 @@ html[data-theme="dark"] {
   }
 }
 
-/* === Final wide desktop tuning === */
+/* =========================================================
+   FINAL HOMEPAGE OVERRIDES
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Desktop hero
+   --------------------------------------------------------- */
 
 @media (min-width: 1181px) {
   :root {
@@ -1625,9 +1632,8 @@ html[data-theme="dark"] {
   }
 
   .home-hero__inner {
-    grid-template-columns: minmax(0, 1.32fr) minmax(430px, 0.88fr);
-    gap: clamp(3rem, 5vw, 5.5rem);
-
+    grid-template-columns: minmax(0, 1.48fr) minmax(390px, 0.78fr);
+    gap: clamp(3rem, 4.5vw, 5rem);
     transform: translateY(-1.5rem);
   }
 
@@ -1636,264 +1642,101 @@ html[data-theme="dark"] {
   }
 
   .home-hero__title-name {
-    font-size: clamp(6.2rem, 8vw, 8.2rem);
-  }
-
-  .home-hero__statement {
-    font-size: clamp(1.8rem, 2.15vw, 2.15rem);
-    max-width: 24ch;
-  }
-
-  .home-hero__portrait {
-    width: clamp(420px, 29vw, 475px);
-    transform: translateX(-4rem);
-  }
-}
-
-/* === Hero final polish === */
-
-@media (min-width: 1181px) {
-  .home-hero__inner {
-    grid-template-columns: minmax(0, 1.48fr) minmax(390px, 0.78fr);
-    gap: clamp(3rem, 4.5vw, 5rem);
-  }
-
-  .home-hero__title-name {
-    white-space: nowrap;
-    font-size: clamp(5.8rem, 7vw, 7.35rem);
-  }
-
-  .home-hero__statement {
-    max-width: 31ch;
-
-    font-family: "Poppins", sans-serif;
-    font-size: clamp(1.7rem, 1.9vw, 1.95rem);
-    font-weight: 500;
-    line-height: 1.42;
-  }
-
-  .home-hero__field {
-    margin-top: 2rem;
-
-    font-family: "Poppins", sans-serif;
-    font-size: clamp(0.95rem, 1vw, 1.08rem);
-    font-weight: 600;
-    letter-spacing: 0.045em;
-    text-transform: uppercase;
-
-    color: var(--global-theme-color);
-  }
-
-  .home-hero__affiliations {
-    font-family: "Poppins", sans-serif;
-    font-size: clamp(1rem, 1vw, 1.08rem);
-    font-weight: 400;
-    line-height: 1.65;
-  }
-
-  .home-hero__portrait {
-    width: clamp(400px, 27vw, 445px);
-    transform: translateX(-5rem);
-  }
-}
-
-/* === Final scroll emphasis tuning === */
-
-@media (min-width: 1181px) {
-  .home-hero__title-name {
     font-size: clamp(5.5rem, 6.6vw, 6.9rem);
     white-space: nowrap;
   }
 
   .home-hero__statement {
     max-width: 31ch;
-
     font-family: "Poppins", sans-serif !important;
     font-size: clamp(1.65rem, 1.85vw, 1.9rem);
-    font-weight: 500;
+    font-weight: 500 !important;
     line-height: 1.42;
+    letter-spacing: -0.025em !important;
+  }
+
+  .home-hero__field {
+    margin-top: 2rem;
+    font-family: "Poppins", sans-serif !important;
+    font-size: clamp(0.95rem, 1vw, 1.08rem);
+    font-weight: 700 !important;
+    letter-spacing: 0.025em !important;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+  }
+
+  .home-hero__affiliations {
+    font-family: "Poppins", sans-serif !important;
+    font-size: clamp(1rem, 1vw, 1.08rem);
+    font-weight: 400 !important;
+    line-height: 1.65;
+    letter-spacing: -0.015em !important;
   }
 
   .home-hero__portrait {
     width: clamp(390px, 26vw, 430px);
-    transform: translateX(-7rem);
+    transform: none !important;
+    margin-right: 5rem;
   }
 }
 
-/* Latest: active item follows the reader while scrolling */
 
-.home-latest__item {
-  opacity: 0.68;
-  transition:
-    opacity 260ms ease,
-    transform 260ms ease;
-}
+/* ---------------------------------------------------------
+   Typography
+   --------------------------------------------------------- */
 
-.home-latest__item:hover,
-.home-latest__item.is-active {
-  opacity: 1;
-  transform: translateX(4px);
-}
-
-/* Research descriptions */
-
-.home-research__axis p {
-  transition:
-    color 240ms ease,
-    opacity 240ms ease;
-}
-
-.home-research__axis.is-active p,
-.home-research__axis:hover p {
-  color: var(--global-text-color);
-  opacity: 1;
-}
-
-/* Experience descriptions */
-
-.home-experience__description,
-.home-experience__department,
-.home-experience__supervisor {
-  transition:
-    color 240ms ease,
-    opacity 240ms ease;
-}
-
-.home-experience__item.is-active .home-experience__description,
-.home-experience__item.is-active .home-experience__department,
-.home-experience__item.is-active .home-experience__supervisor,
-.home-experience__item:hover .home-experience__description,
-.home-experience__item:hover .home-experience__department,
-.home-experience__item:hover .home-experience__supervisor {
-  color: var(--global-text-color);
-  opacity: 1;
-}
-
-/* Background descriptions */
-
-.home-background__detail,
-.home-background__degree {
-  transition:
-    color 240ms ease,
-    opacity 240ms ease;
-}
-
-.home-background__item.is-active .home-background__detail,
-.home-background__item.is-active .home-background__degree,
-.home-background__item:hover .home-background__detail,
-.home-background__item:hover .home-background__degree {
-  color: var(--global-text-color);
-  opacity: 1;
-}
-
-/* === Final interaction polish === */
-
-/* More room for the right-side section navigation */
-@media (min-width: 1181px) {
-  .home-hero__portrait {
-    transform: translateX(-10rem);
-  }
-}
-
-/* Main section numbers: 01 Latest, 02 Research, etc. */
 .home-section-number {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: 0.04em !important;
 }
 
-/* Research: description follows title emphasis */
-.home-research__axis p {
-  color: var(--global-text-color-light);
-  opacity: 0.62;
-
-  transition:
-    color 240ms ease,
-    opacity 240ms ease;
+.home-research [class*="number"] {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  letter-spacing: 0.035em !important;
 }
 
-.home-research__axis:hover p,
-.home-research__axis.is-active p {
-  color: var(--global-text-color);
-  opacity: 1;
-}
-
-/* Experience: supporting text follows active item */
-.home-experience__department,
-.home-experience__description,
-.home-experience__supervisor {
-  opacity: 0.62;
-
-  transition:
-    color 240ms ease,
-    opacity 240ms ease;
-}
-
-.home-experience__item:hover .home-experience__department,
-.home-experience__item:hover .home-experience__description,
-.home-experience__item:hover .home-experience__supervisor,
-.home-experience__item.is-active .home-experience__department,
-.home-experience__item.is-active .home-experience__description,
-.home-experience__item.is-active .home-experience__supervisor {
-  color: var(--global-text-color);
-  opacity: 1;
-}
-
-/* Background: degree/detail follow active item */
-.home-background__degree,
-.home-background__detail {
-  opacity: 0.62;
-
-  transition:
-    color 240ms ease,
-    opacity 240ms ease;
-}
-
-.home-background__item:hover .home-background__degree,
-.home-background__item:hover .home-background__detail,
-.home-background__item.is-active .home-background__degree,
-.home-background__item.is-active .home-background__detail {
-  color: var(--global-text-color);
-  opacity: 1;
-}
-
-/* Latest: whole entry becomes the reading focus */
-.home-latest__item {
-  opacity: 0.58;
-
-  transition:
-    opacity 260ms ease,
-    transform 260ms ease;
-}
-
-.home-latest__item:hover,
-.home-latest__item.is-active {
-  opacity: 1;
-  transform: translateX(4px);
-}
-
-/* === Unified active-state polish === */
-
-/* All editorial numbers use Poppins */
-.home-section-number,
-.home-research__axis-number,
 .home-experience__year,
 .home-background__year,
 .home-publication-card__year {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  letter-spacing: normal !important;
 }
 
-/* Leave enough room for section-nav labels */
-@media (min-width: 1181px) {
-  .home-hero__portrait {
-    transform: translateX(-13rem);
-  }
+
+/* ---------------------------------------------------------
+   Latest
+   --------------------------------------------------------- */
+
+.home-latest__item {
+  opacity: 0.58;
+  transition:
+    opacity 260ms ease,
+    transform 260ms ease;
 }
 
-/* Research: title + description move together */
+.home-latest__item:hover,
+.home-latest__item.is-active {
+  opacity: 1 !important;
+  transform: translateX(4px) !important;
+}
+
+
+/* ---------------------------------------------------------
+   Research
+   --------------------------------------------------------- */
+
+.home-research__axis p {
+  color: var(--global-text-color-light);
+  opacity: 0.62;
+}
+
 .home-research__axis h3,
 .home-research__axis p {
   transition:
@@ -1903,13 +1746,28 @@ html[data-theme="dark"] {
 }
 
 .home-research__axis:hover h3,
-.home-research__axis:hover p,
-.home-research__axis.is-active h3,
-.home-research__axis.is-active p {
+.home-research__axis.is-active h3 {
   transform: translateX(4px);
 }
 
-/* Experience: entire textual content follows the active state */
+.home-research__axis:hover p,
+.home-research__axis.is-active p {
+  color: var(--global-text-color) !important;
+  opacity: 1 !important;
+  transform: translateX(4px) !important;
+}
+
+
+/* ---------------------------------------------------------
+   Research experience
+   --------------------------------------------------------- */
+
+.home-experience__department,
+.home-experience__description,
+.home-experience__supervisor {
+  opacity: 0.62;
+}
+
 .home-experience__institution,
 .home-experience__content h3,
 .home-experience__department,
@@ -1923,18 +1781,32 @@ html[data-theme="dark"] {
 
 .home-experience__item:hover .home-experience__institution,
 .home-experience__item:hover .home-experience__content h3,
-.home-experience__item:hover .home-experience__department,
-.home-experience__item:hover .home-experience__description,
-.home-experience__item:hover .home-experience__supervisor,
 .home-experience__item.is-active .home-experience__institution,
-.home-experience__item.is-active .home-experience__content h3,
-.home-experience__item.is-active .home-experience__department,
-.home-experience__item.is-active .home-experience__description,
-.home-experience__item.is-active .home-experience__supervisor {
+.home-experience__item.is-active .home-experience__content h3 {
   transform: translateX(4px);
 }
 
-/* Background: institution + degree + details move together */
+.home-experience__item:hover .home-experience__department,
+.home-experience__item:hover .home-experience__description,
+.home-experience__item:hover .home-experience__supervisor,
+.home-experience__item.is-active .home-experience__department,
+.home-experience__item.is-active .home-experience__description,
+.home-experience__item.is-active .home-experience__supervisor {
+  color: var(--global-text-color) !important;
+  opacity: 1 !important;
+  transform: translateX(4px) !important;
+}
+
+
+/* ---------------------------------------------------------
+   Background
+   --------------------------------------------------------- */
+
+.home-background__degree,
+.home-background__detail {
+  opacity: 0.62;
+}
+
 .home-background__main h3,
 .home-background__degree,
 .home-background__detail {
@@ -1945,66 +1817,10 @@ html[data-theme="dark"] {
 }
 
 .home-background__item:hover .home-background__main h3,
-.home-background__item:hover .home-background__degree,
-.home-background__item:hover .home-background__detail,
-.home-background__item.is-active .home-background__main h3,
-.home-background__item.is-active .home-background__degree,
-.home-background__item.is-active .home-background__detail {
+.home-background__item.is-active .home-background__main h3 {
   transform: translateX(4px);
 }
 
-/* Latest already activates the whole entry, keep movement consistent */
-.home-latest__item:hover,
-.home-latest__item.is-active {
-  transform: translateX(4px);
-}
-
-/* === Final positioning and typography fix === */
-
-/* Move portrait substantially left to clear side-navigation labels */
-@media (min-width: 1181px) {
-  .home-hero__portrait {
-    transform: none !important;
-    margin-right: 8rem;
-  }
-}
-
-/* Editorial section numbers + Research numbers */
-.home-section-number,
-.home-research [class*="number"] {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-}
-
-/* Research Experience dates stay editorial / Cormorant */
-.home-experience__year {
-  font-family: "Cormorant Garamond", Georgia, serif !important;
-  font-weight: 400;
-  letter-spacing: normal;
-}
-
-/* Research: description moves and brightens with its title */
-.home-research__axis:hover p,
-.home-research__axis.is-active p {
-  color: var(--global-text-color) !important;
-  opacity: 1 !important;
-  transform: translateX(4px) !important;
-}
-
-/* Experience: all supporting copy moves with the title */
-.home-experience__item:hover .home-experience__department,
-.home-experience__item:hover .home-experience__description,
-.home-experience__item:hover .home-experience__supervisor,
-.home-experience__item.is-active .home-experience__department,
-.home-experience__item.is-active .home-experience__description,
-.home-experience__item.is-active .home-experience__supervisor {
-  color: var(--global-text-color) !important;
-  opacity: 1 !important;
-  transform: translateX(4px) !important;
-}
-
-/* Background: supporting copy moves with the institution */
 .home-background__item:hover .home-background__degree,
 .home-background__item:hover .home-background__detail,
 .home-background__item.is-active .home-background__degree,
@@ -2014,154 +1830,11 @@ html[data-theme="dark"] {
   transform: translateX(4px) !important;
 }
 
-/* Latest: whole item follows the active state */
-.home-latest__item:hover,
-.home-latest__item.is-active {
-  opacity: 1 !important;
-  transform: translateX(4px) !important;
-}
 
-/* === Final small corrections === */
+/* ---------------------------------------------------------
+   Contact
+   --------------------------------------------------------- */
 
-@media (min-width: 1181px) {
-  .home-hero__portrait {
-    margin-right: 5rem;
-  }
-}
-
-/* Publication year stays editorial */
-.home-publication-card__year {
-  font-family: "Cormorant Garamond", Georgia, serif !important;
-  font-weight: 300;
-  letter-spacing: normal;
-}
-
-/* === Stronger Poppins character === */
-
-.home-hero__statement {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 500;
-  letter-spacing: -0.035em;
-}
-
-.home-hero__field {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 600;
-  letter-spacing: 0.035em;
-}
-
-.home-hero__affiliations {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 400;
-  letter-spacing: -0.025em;
-}
-
-.home-section-number,
-.home-research__axis-number {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
-
-/* Keep editorial dates in Cormorant */
-.home-experience__year,
-.home-publication-card__year,
-.home-background__year {
-  font-family: "Cormorant Garamond", Georgia, serif !important;
-  letter-spacing: normal;
-}
-
-/* === Definitive Poppins normalization === */
-
-/* Hero statement — pronounced Poppins look */
-.home-hero__statement {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.035em !important;
-}
-
-/* Main section numbers: 01 Latest, 02 Research, 03 Experience, etc. */
-.home-section-number {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 700 !important;
-  font-style: normal !important;
-  letter-spacing: 0.035em !important;
-}
-
-/* All numbers belonging specifically to Research */
-.home-research [class*="number"] {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 700 !important;
-  font-style: normal !important;
-  letter-spacing: 0.035em !important;
-}
-
-/* Dates / years remain editorial */
-.home-experience__year,
-.home-background__year,
-.home-publication-card__year {
-  font-family: "Cormorant Garamond", Georgia, serif !important;
-  font-style: normal;
-  font-weight: 400 !important;
-  letter-spacing: normal !important;
-}
-
-/* === Hero weight balance === */
-
-.home-hero__statement {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 500 !important;
-}
-
-.home-hero__field {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.025em !important;
-}
-
-/* === BEGIN FINAL POPPINS LOCK === */
-
-/* Hero sans-serif typography */
-.home-hero__statement {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 500 !important;
-  letter-spacing: -0.025em !important;
-}
-
-.home-hero__field {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.025em !important;
-}
-
-.home-hero__affiliations {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 400 !important;
-  letter-spacing: -0.015em !important;
-}
-
-/* Section / Research numbering */
-.home-section-number,
-.home-research__axis-number {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 600 !important;
-  font-style: normal !important;
-  letter-spacing: 0.04em !important;
-}
-
-/* Years remain editorial */
-.home-experience__year,
-.home-background__year,
-.home-publication-card__year {
-  font-family: "Cormorant Garamond", Georgia, serif !important;
-  font-weight: 400 !important;
-  font-style: normal !important;
-  letter-spacing: normal !important;
-}
-
-/* === END FINAL POPPINS LOCK === */
-
-/* Keep "Let's talk." together */
 .home-contact__statement span {
   display: inline-block;
   white-space: nowrap;
