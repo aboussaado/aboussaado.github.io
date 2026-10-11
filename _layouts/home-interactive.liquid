@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="home-interactive">
+  {% include home/hero.liquid %}
+  {% include home/latest.liquid %}
+
+  <div class="home-interactive-sections">
+    {% include home/research.liquid %}
+    {% include home/experience.liquid %}
+    {% include home/publications.liquid %}
+    {% include home/background.liquid %}
+  </div>
+
+  {% include home/contact.liquid %}
+  {% include home/section-nav.liquid %}
+</div>
+
+<script src="{{ '/assets/js/home-interactive.js' | relative_url }}"></script>

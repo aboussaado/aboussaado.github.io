@@ -1,0 +1,1894 @@
+
+/* =========================================================
+   EDITORIAL CV
+   ========================================================= */
+
+.cv-page {
+  width: 100%;
+
+  padding:
+    clamp(7.5rem, 11vw, 11rem)
+    clamp(1.4rem, 4vw, 4rem)
+    clamp(7rem, 11vw, 11rem);
+
+  color: var(--global-text-color);
+}
+
+.cv-page__inner {
+  width: min(1600px, 100%);
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   Hero
+   ========================================================= */
+
+.cv-page__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.55fr);
+  gap: clamp(4rem, 9vw, 10rem);
+
+  align-items: end;
+
+  margin-bottom: clamp(7rem, 12vw, 12rem);
+}
+
+.cv-page__eyebrow {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--global-theme-color);
+}
+
+.cv-page__hero h1 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(7rem, 13vw, 13rem);
+  font-weight: 400;
+  line-height: 0.72;
+  letter-spacing: -0.065em;
+
+  color: var(--global-text-color);
+}
+
+.cv-page__intro {
+  max-width: 25ch;
+
+  margin:
+    clamp(2.5rem, 4vw, 4rem)
+    0
+    0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.35rem, 1.7vw, 1.65rem);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+
+  color: var(--global-text-color);
+}
+
+.cv-page__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 0.8rem;
+
+  padding-left: clamp(2rem, 4vw, 4rem);
+
+  border-left: 1px solid var(--global-divider-color);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.5;
+
+  color: var(--global-text-color-light);
+}
+
+.cv-page__meta a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.cv-page__download {
+  position: relative;
+
+  margin-bottom: 1.5rem;
+
+  padding-bottom: 0.22rem;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  color: var(--global-theme-color) !important;
+}
+
+.cv-page__download::after,
+.cv-page__socials a::after,
+.cv-publication__link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 1px;
+
+  background: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: right;
+
+  transition: transform 220ms ease;
+}
+
+.cv-page__download:hover::after,
+.cv-page__socials a:hover::after,
+.cv-publication__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.cv-page__socials {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1.25rem;
+
+  margin-top: 0.7rem;
+}
+
+.cv-page__socials a {
+  position: relative;
+
+  padding-bottom: 0.15rem;
+
+  color: var(--global-theme-color);
+}
+
+
+/* =========================================================
+   Sections
+   ========================================================= */
+
+.cv-section {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.28fr) minmax(0, 1fr);
+  gap: clamp(3rem, 7vw, 8rem);
+
+  padding:
+    clamp(5rem, 8vw, 8rem)
+    0;
+
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.cv-section__heading {
+  align-self: start;
+
+  position: sticky;
+  top: 7rem;
+}
+
+.cv-section__number {
+  display: block;
+
+  margin-bottom: 0.65rem;
+
+  font-family: "Poppins", sans-serif !important;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.04em;
+
+  color: var(--global-theme-color);
+}
+
+.cv-section__heading h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.8rem, 4.6vw, 4.8rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+
+  color: var(--global-text-color);
+}
+
+
+/* =========================================================
+   Timeline entries
+   ========================================================= */
+
+.cv-entry,
+.cv-publication,
+.cv-award,
+.cv-certificate {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.18fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4.5rem);
+
+  padding:
+    clamp(2.5rem, 4vw, 4rem)
+    0;
+
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.cv-section__content > article:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.cv-entry__date {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.7rem, 2.3vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1;
+
+  color: var(--global-text-color-light);
+}
+
+.cv-entry__main {
+  min-width: 0;
+}
+
+.cv-entry__main h3 {
+  max-width: 24ch;
+
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.025em;
+
+  color: var(--global-text-color);
+
+  transition:
+    color 240ms ease,
+    transform 240ms ease;
+}
+
+.cv-entry__role {
+  margin: 0.8rem 0 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.5;
+
+  color: var(--global-theme-color);
+
+  transition:
+    opacity 240ms ease,
+    transform 240ms ease;
+}
+
+.cv-entry__location {
+  margin: 0.35rem 0 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+
+  color: var(--global-text-color-light);
+}
+
+.cv-entry__summary,
+.cv-entry__highlights,
+.cv-publication__authors,
+.cv-publication__venue {
+  max-width: 72ch;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.72;
+
+  color: var(--global-text-color-light);
+
+  opacity: 0.66;
+
+  transition:
+    color 240ms ease,
+    opacity 240ms ease,
+    transform 240ms ease;
+}
+
+.cv-entry__summary {
+  margin-top: 1.2rem;
+}
+
+.cv-entry__summary p {
+  margin: 0;
+}
+
+.cv-entry__highlights {
+  padding-left: 1.1rem;
+  margin:
+    0.8rem
+    0
+    0;
+}
+
+.cv-entry__highlights li + li {
+  margin-top: 0.35rem;
+}
+
+
+/* Active / hover */
+
+.cv-track-item:hover .cv-entry__main h3,
+.cv-track-item.is-active .cv-entry__main h3 {
+  color: var(--global-theme-color);
+  transform: translateX(4px);
+}
+
+.cv-track-item:hover .cv-entry__role,
+.cv-track-item.is-active .cv-entry__role,
+.cv-track-item:hover .cv-entry__summary,
+.cv-track-item.is-active .cv-entry__summary,
+.cv-track-item:hover .cv-entry__highlights,
+.cv-track-item.is-active .cv-entry__highlights,
+.cv-track-item:hover .cv-publication__authors,
+.cv-track-item.is-active .cv-publication__authors,
+.cv-track-item:hover .cv-publication__venue,
+.cv-track-item.is-active .cv-publication__venue {
+  color: var(--global-text-color);
+  opacity: 1;
+
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   Publications
+   ========================================================= */
+
+.cv-publication__authors {
+  margin: 1rem 0 0;
+}
+
+.cv-publication__self {
+  font-weight: 600;
+  color: var(--global-text-color);
+}
+
+.cv-publication__venue {
+  margin: 0.4rem 0 0;
+}
+
+.cv-publication__link {
+  display: inline-block;
+  position: relative;
+
+  margin-top: 1rem;
+  padding-bottom: 0.16rem;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  color: var(--global-theme-color);
+  text-decoration: none !important;
+}
+
+
+/* =========================================================
+   Skills
+   ========================================================= */
+
+.cv-skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.cv-skill-group {
+  padding:
+    2.3rem
+    2rem
+    2.3rem
+    0;
+
+  border-bottom: 1px solid var(--global-divider-color);
+
+  transition:
+    opacity 240ms ease,
+    transform 240ms ease;
+}
+
+.cv-skill-group:nth-child(even) {
+  padding-left: 2rem;
+  border-left: 1px solid var(--global-divider-color);
+}
+
+.cv-skill-group h3 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 500;
+
+  color: var(--global-text-color);
+}
+
+.cv-skill-group p {
+  margin: 0.75rem 0 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.83rem;
+  line-height: 1.65;
+
+  color: var(--global-text-color-light);
+}
+
+.cv-skill-group.is-active {
+  transform: translateX(4px);
+}
+
+.cv-skill-group.is-active p {
+  color: var(--global-text-color);
+}
+
+
+/* Languages */
+
+.cv-languages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap:
+    0
+    3rem;
+
+  margin-top: 4rem;
+}
+
+.cv-language {
+  display: flex;
+  justify-content: space-between;
+
+  padding:
+    1rem
+    0;
+
+  border-bottom: 1px solid var(--global-divider-color);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+}
+
+.cv-language span:last-child {
+  color: var(--global-text-color-light);
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .cv-page__hero {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .cv-page__meta {
+    padding-left: 0;
+    padding-top: 2rem;
+
+    border-left: 0;
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  .cv-section {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .cv-section__heading {
+    position: static;
+  }
+
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .cv-page {
+    padding:
+      7rem
+      1.3rem
+      5rem;
+  }
+
+  .cv-page__hero {
+    margin-bottom: 6rem;
+  }
+
+  .cv-page__hero h1 {
+    font-size: clamp(6rem, 34vw, 9rem);
+  }
+
+  .cv-section {
+    padding:
+      4rem
+      0;
+  }
+
+  .cv-entry,
+  .cv-publication,
+  .cv-award,
+  .cv-certificate {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .cv-entry__main h3 {
+    max-width: none;
+  }
+
+  .cv-skills,
+  .cv-languages {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-skill-group,
+  .cv-skill-group:nth-child(even) {
+    padding:
+      1.8rem
+      0;
+
+    border-left: 0;
+  }
+
+}
+
+
+/* === CV Rössler attractor === */
+
+
+/* ---------------------------------------------------------
+   Three-column hero
+   --------------------------------------------------------- */
+
+@media (min-width: 1101px) {
+  .cv-page__hero {
+    grid-template-columns:
+      minmax(0, 0.92fr)
+      minmax(400px, 0.88fr)
+      minmax(260px, 0.48fr);
+
+    gap: clamp(3rem, 5vw, 6rem);
+    align-items: center;
+  }
+
+  .cv-page__hero-copy,
+  .cv-page__meta {
+    align-self: center;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   Attractor
+   --------------------------------------------------------- */
+
+.cv-page__rossler {
+  width: 100%;
+  max-width: 520px;
+
+  justify-self: center;
+  align-self: center;
+
+  color: #a31f34;
+
+  transition: color 350ms ease;
+}
+
+html[data-theme="dark"] .cv-page__rossler {
+  color: #4147ff;
+}
+
+.rossler-attractor {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  overflow: visible;
+}
+
+
+.rossler-attractor__curve,
+.rossler-attractor__glow {
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  vector-effect: non-scaling-stroke;
+  shape-rendering: geometricPrecision;
+}
+
+
+.rossler-attractor__curve {
+  stroke-width: 1.35;
+  opacity: 0.92;
+}
+
+
+.rossler-attractor__glow {
+  stroke-width: 5;
+  opacity: 0.045;
+}
+
+
+html[data-theme="dark"]
+.rossler-attractor__curve {
+  opacity: 0.96;
+}
+
+
+html[data-theme="dark"]
+.rossler-attractor__glow {
+  opacity: 0.12;
+}
+
+
+/* ---------------------------------------------------------
+   Draw-on-load
+   --------------------------------------------------------- */
+
+.rossler-attractor__curve,
+.rossler-attractor__glow {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+
+.cv-page__rossler.is-ready
+.rossler-attractor__curve {
+  animation:
+    rossler-draw
+    3.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+.cv-page__rossler.is-ready
+.rossler-attractor__glow {
+  animation:
+    rossler-draw
+    4.2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+@keyframes rossler-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .cv-page__hero {
+    grid-template-columns:
+      minmax(0, 0.9fr)
+      minmax(340px, 1fr);
+
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .cv-page__rossler {
+    max-width: 470px;
+  }
+
+  .cv-page__meta {
+    grid-column: 1 / -1;
+
+    padding-left: 0;
+    padding-top: 2rem;
+
+    border-left: 0;
+    border-top:
+      1px solid
+      var(--global-divider-color);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .cv-page__hero {
+    display: block;
+  }
+
+  .cv-page__rossler {
+    width: min(100%, 450px);
+
+    margin:
+      3.5rem
+      auto;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .rossler-attractor__curve,
+  .rossler-attractor__glow {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+
+    animation: none !important;
+  }
+}
+
+
+/* === CV final hero + section rail === */
+
+
+/* =========================================================
+   Desktop hero composition
+   ========================================================= */
+
+@media (min-width: 1101px) {
+
+  /*
+   * Do not let the hero occupy the whole 1600 px content
+   * width. This pulls both the attractor and metadata inward.
+   */
+  .cv-page__hero {
+    width: min(1460px, 100%);
+
+    grid-template-columns:
+      minmax(500px, 1.08fr)
+      minmax(360px, 0.72fr)
+      minmax(245px, 0.44fr);
+
+    gap: clamp(2rem, 3.1vw, 3.7rem);
+
+    align-items: center;
+  }
+
+
+  /*
+   * Slight optical correction:
+   * mathematically centered is a little too far right
+   * because the huge "CV" carries more visual mass.
+   */
+  .cv-page__rossler {
+    width: 100%;
+    max-width: 455px;
+
+    justify-self: center;
+
+    transform: translateX(-1.25rem);
+  }
+
+
+  .cv-page__meta {
+    justify-self: start;
+
+    width: 100%;
+
+    padding-left: clamp(1.5rem, 2.2vw, 2.4rem);
+  }
+
+}
+
+
+/* =========================================================
+   Rössler proportions
+   ========================================================= */
+
+.rossler-attractor {
+  /*
+   * Keep the attractor visually tall enough for the new
+   * near-side 3D view.
+   */
+  aspect-ratio: 620 / 420;
+}
+
+
+/* =========================================================
+   Fixed CV section rail
+   ========================================================= */
+
+.cv-page__rail {
+  position: fixed;
+
+  right: clamp(1.4rem, 2vw, 2.6rem);
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 30;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 0.72rem;
+
+  pointer-events: auto;
+}
+
+
+.cv-page__rail a {
+  display: grid;
+
+  grid-template-columns:
+    1.5rem
+    auto
+    1.5rem;
+
+  align-items: center;
+
+  column-gap: 0.55rem;
+
+  min-height: 1.5rem;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.67rem;
+  font-weight: 500;
+  line-height: 1;
+
+  letter-spacing: 0.015em;
+
+  color: var(--global-text-color-light);
+
+  opacity: 0.42;
+
+  text-decoration: none !important;
+
+  transition:
+    color 220ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+
+.cv-page__rail-number {
+  font-size: 0.60rem;
+  font-weight: 600;
+
+  text-align: right;
+
+  opacity: 0.68;
+}
+
+
+.cv-page__rail-label {
+  white-space: nowrap;
+}
+
+
+.cv-page__rail-line {
+  display: block;
+
+  width: 1.15rem;
+  height: 1px;
+
+  justify-self: end;
+
+  background: currentColor;
+
+  transition:
+    width 220ms ease,
+    opacity 220ms ease;
+}
+
+
+.cv-page__rail a:hover {
+  color: var(--global-theme-color);
+
+  opacity: 0.82;
+
+  transform: translateX(-2px);
+}
+
+
+.cv-page__rail a.is-active {
+  color: var(--global-theme-color);
+
+  opacity: 1;
+}
+
+
+.cv-page__rail a.is-active
+.cv-page__rail-line {
+  width: 1.9rem;
+}
+
+
+.cv-page__rail a.is-active
+.cv-page__rail-number {
+  opacity: 1;
+}
+
+
+/*
+ * Keep the rail only where there is genuine side margin.
+ * Otherwise it competes with the CV content.
+ */
+@media (max-width: 1320px) {
+  .cv-page__rail {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   Slightly narrower large screens
+   ========================================================= */
+
+@media (min-width: 1101px) and (max-width: 1500px) {
+
+  .cv-page__hero {
+    width: min(1370px, 100%);
+
+    grid-template-columns:
+      minmax(430px, 1fr)
+      minmax(340px, 0.70fr)
+      minmax(230px, 0.42fr);
+
+    gap: 2.3rem;
+  }
+
+  .cv-page__rossler {
+    max-width: 420px;
+    transform: translateX(-0.5rem);
+  }
+
+}
+
+
+/* =========================================================
+   Mobile / tablet safety
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .cv-page__rossler {
+    transform: none;
+  }
+
+}
+
+
+/* === CV hero polish v2 === */
+
+
+/* =========================================================
+   POPPINS — functional typography
+   ========================================================= */
+
+.cv-page__eyebrow,
+.cv-page__intro,
+.cv-page__meta,
+.cv-page__meta a,
+.cv-page__download,
+.cv-page__socials,
+.cv-page__socials a,
+.cv-section__number,
+.cv-entry__role,
+.cv-entry__location,
+.cv-entry__summary,
+.cv-entry__highlights,
+.cv-publication__authors,
+.cv-publication__venue,
+.cv-publication__link,
+.cv-skill-group p,
+.cv-language,
+.cv-page__rail,
+.cv-page__rail a {
+  font-family:
+    "Poppins",
+    sans-serif !important;
+
+  font-style: normal;
+}
+
+
+/* =========================================================
+   DESKTOP HERO
+   ========================================================= */
+
+@media (min-width: 1101px) {
+
+  /*
+   * The whole composition is deliberately left-aligned
+   * rather than stretched across the complete 1600 px.
+   */
+  .cv-page__hero {
+    width: min(1360px, 100%);
+
+    grid-template-columns:
+      minmax(470px, 0.94fr)
+      minmax(475px, 0.94fr)
+      minmax(230px, 0.40fr);
+
+    gap: clamp(
+      1.2rem,
+      2.2vw,
+      2.6rem
+    );
+
+    align-items: center;
+  }
+
+
+  /*
+   * Larger Rössler and strong optical shift toward CV.
+   */
+  .cv-page__rossler {
+    width: 112%;
+    max-width: 600px;
+
+    justify-self: center;
+
+    transform:
+      translateX(-3rem);
+  }
+
+
+  /*
+   * Metadata comes inward with the attractor.
+   */
+  .cv-page__meta {
+    width: 100%;
+
+    justify-self: start;
+
+    padding-left:
+      clamp(
+        1.25rem,
+        1.8vw,
+        1.9rem
+      );
+
+    transform:
+      translateX(-2.4rem);
+  }
+
+}
+
+
+/* =========================================================
+   RÖSSLER
+   ========================================================= */
+
+.rossler-attractor__curve {
+  stroke-width: 1.18;
+  opacity: 0.90;
+}
+
+
+.rossler-attractor__glow {
+  stroke-width: 4.5;
+  opacity: 0.035;
+}
+
+
+html[data-theme="dark"]
+.rossler-attractor__curve {
+  opacity: 0.96;
+}
+
+
+html[data-theme="dark"]
+.rossler-attractor__glow {
+  opacity: 0.10;
+}
+
+
+/*
+ * A longer attractor needs a little more time to appear.
+ */
+.cv-page__rossler.is-ready
+.rossler-attractor__curve {
+  animation-duration: 4.4s;
+}
+
+
+.cv-page__rossler.is-ready
+.rossler-attractor__glow {
+  animation-duration: 4.8s;
+}
+
+
+/* =========================================================
+   RIGHT NAVIGATION
+   Homepage-style:
+   label hidden -> revealed on hover.
+   ========================================================= */
+
+.cv-page__rail {
+  position: fixed;
+
+  right:
+    clamp(
+      1.2rem,
+      1.7vw,
+      2rem
+    );
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  z-index: 30;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 0.72rem;
+}
+
+
+/*
+ * The rightmost elements stay fixed.
+ * The label grows LEFT on hover.
+ */
+.cv-page__rail a {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 0.52rem;
+
+  min-height: 1.35rem;
+
+  color:
+    var(--global-text-color-light);
+
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  text-decoration: none !important;
+
+  opacity: 0.38;
+
+  transition:
+    color 200ms ease,
+    opacity 200ms ease;
+}
+
+
+/*
+ * Label first visually, although it comes after the number
+ * in the HTML.
+ */
+.cv-page__rail-label {
+  order: -1;
+
+  display: block;
+
+  max-width: 0;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  transform:
+    translateX(5px);
+
+  transition:
+    max-width 260ms ease,
+    opacity 180ms ease,
+    transform 220ms ease;
+}
+
+
+/*
+ * Reveal the section name only while hovering that item.
+ */
+.cv-page__rail a:hover
+.cv-page__rail-label,
+.cv-page__rail a:focus-visible
+.cv-page__rail-label {
+  max-width: 8.5rem;
+
+  opacity: 1;
+
+  transform:
+    translateX(0);
+}
+
+
+.cv-page__rail-number {
+  width: 1.4rem;
+
+  flex: 0 0 auto;
+
+  text-align: right;
+
+  font-size: 0.60rem;
+  font-weight: 600;
+
+  opacity: 0.74;
+}
+
+
+.cv-page__rail-line {
+  display: block;
+
+  width: 1.1rem;
+  height: 1px;
+
+  flex: 0 0 auto;
+
+  background:
+    currentColor;
+
+  opacity: 0.72;
+
+  transition:
+    width 220ms ease,
+    opacity 220ms ease;
+}
+
+
+/* Hover */
+
+.cv-page__rail a:hover,
+.cv-page__rail a:focus-visible {
+  color:
+    var(--global-text-color);
+
+  opacity: 0.88;
+}
+
+
+/*
+ * Only the section currently reached becomes accent red
+ * (or blue in dark mode through --global-theme-color).
+ */
+.cv-page__rail a.is-active {
+  color:
+    var(--global-theme-color);
+
+  opacity: 1;
+}
+
+
+.cv-page__rail a.is-active
+.cv-page__rail-number {
+  opacity: 1;
+}
+
+
+.cv-page__rail a.is-active
+.cv-page__rail-line {
+  width: 1.85rem;
+  opacity: 1;
+}
+
+
+/*
+ * Importantly: active label remains hidden unless hovered.
+ * This keeps the rail visually identical in spirit to the
+ * homepage.
+ */
+.cv-page__rail a.is-active
+.cv-page__rail-label {
+  color:
+    var(--global-theme-color);
+}
+
+
+/* =========================================================
+   MID-SIZE DESKTOP
+   ========================================================= */
+
+@media
+  (min-width: 1101px)
+  and
+  (max-width: 1480px) {
+
+  .cv-page__hero {
+    width: min(1270px, 100%);
+
+    grid-template-columns:
+      minmax(430px, 0.92fr)
+      minmax(420px, 0.88fr)
+      minmax(215px, 0.38fr);
+
+    gap: 1.25rem;
+  }
+
+
+  .cv-page__rossler {
+    width: 108%;
+
+    max-width: 545px;
+
+    transform:
+      translateX(-2rem);
+  }
+
+
+  .cv-page__meta {
+    transform:
+      translateX(-1.5rem);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .cv-page__rossler,
+  .cv-page__meta {
+    transform: none;
+  }
+
+}
+
+
+/*
+ * Side navigation only when there is enough side space.
+ */
+@media (max-width: 1320px) {
+
+  .cv-page__rail {
+    display: none;
+  }
+
+}
+
+
+/* === CV rail typography + active colour fix === */
+
+/*
+ * Labels stay functional / Poppins.
+ */
+.cv-page__rail-label {
+  font-family: "Poppins", sans-serif !important;
+}
+
+
+/*
+ * Section numbers use the editorial face.
+ */
+.cv-page__rail-number {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif !important;
+
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  line-height: 1;
+
+  letter-spacing: 0 !important;
+
+  color: inherit;
+}
+
+
+/*
+ * Force every part of the currently reached section
+ * to use the accent colour.
+ */
+.cv-page__rail a.is-active {
+  color: var(--global-theme-color) !important;
+}
+
+
+.cv-page__rail a.is-active
+.cv-page__rail-number {
+  color: var(--global-theme-color) !important;
+}
+
+
+.cv-page__rail a.is-active
+.cv-page__rail-line {
+  background-color: var(--global-theme-color) !important;
+  opacity: 1;
+}
+
+
+/*
+ * Inactive numbers remain intentionally quiet.
+ */
+.cv-page__rail a:not(.is-active)
+.cv-page__rail-number {
+  color: var(--global-text-color-light);
+}
+
+
+/*
+ * Hover reveals the label, but does not falsely make an
+ * inactive section look active.
+ */
+.cv-page__rail a:not(.is-active):hover
+.cv-page__rail-number {
+  color: var(--global-text-color);
+}
+
+
+/* === Rossler composited motion === */
+
+.rossler-attractor {
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .cv-page__rossler.is-ready
+  .rossler-attractor {
+    animation:
+      rossler-composited-drift
+      20s
+      ease-in-out
+      4.5s
+      infinite
+      alternate;
+  }
+}
+
+
+@keyframes rossler-composited-drift {
+  from {
+    transform:
+      translate3d(-1px, 2px, 0)
+      rotate(-0.14deg)
+      scale(0.998);
+  }
+
+  to {
+    transform:
+      translate3d(2px, -2px, 0)
+      rotate(0.18deg)
+      scale(1.003);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .rossler-attractor {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+
+
+/* === Static scientific illustrations === */
+
+.lorenz-63,
+.rossler-attractor,
+.lorenz-63__curve,
+.lorenz-63__glow,
+.rossler-attractor__curve,
+.rossler-attractor__glow {
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.lorenz-63__curve,
+.lorenz-63__glow,
+.rossler-attractor__curve,
+.rossler-attractor__glow {
+  stroke-dasharray: none !important;
+  stroke-dashoffset: 0 !important;
+}
+
+.lorenz-63,
+.rossler-attractor {
+  will-change: auto !important;
+}
+
+
+/* === CV rail exact homepage clone === */
+
+/*
+ * Exact visual clone of .home-section-nav
+ */
+
+.cv-page__rail {
+  position: fixed;
+
+  top: 50%;
+  right: clamp(1.2rem, 2vw, 2.2rem);
+
+  z-index: 30;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 0.65rem;
+
+  transform: translateY(-50%);
+}
+
+
+.cv-page__rail a {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 0.55rem;
+
+  min-height: 1.5rem;
+
+  color: var(--global-text-color-light);
+
+  opacity: 1 !important;
+
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+
+  text-decoration: none !important;
+
+  transform: none !important;
+}
+
+.cv-page__rail-label {
+  order: 1;
+}
+
+.cv-page__rail-number {
+  order: 2;
+  min-width: 1.4rem;
+  text-align: right;
+}
+
+.cv-page__rail-line {
+  order: 3;
+}
+
+
+/* ---------------------------------------------------------
+   Label
+   --------------------------------------------------------- */
+
+.cv-page__rail-label {
+  order: initial !important;
+
+  display: inline !important;
+
+  max-width: none !important;
+
+  overflow: visible !important;
+
+  white-space: nowrap;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif !important;
+
+  font-size: 0.98rem !important;
+  font-weight: 300 !important;
+  line-height: normal !important;
+
+  letter-spacing: normal !important;
+
+  opacity: 0;
+
+  transform: translateX(6px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    color 180ms ease;
+}
+
+
+/* ---------------------------------------------------------
+   Number
+   --------------------------------------------------------- */
+
+.cv-page__rail-number {
+  width: auto !important;
+  min-width: 1.4rem !important;
+
+  flex: initial !important;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif !important;
+
+  font-size: 0.86rem !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+
+  letter-spacing: normal !important;
+
+  text-align: right;
+
+  color: inherit !important;
+
+  opacity: 1 !important;
+
+  transition:
+    color 180ms ease,
+    opacity 180ms ease;
+}
+
+
+/* ---------------------------------------------------------
+   Line
+   --------------------------------------------------------- */
+
+.cv-page__rail-line {
+  display: block;
+
+  width: 0.65rem !important;
+  height: 1px;
+
+  flex: initial !important;
+
+  background: currentColor !important;
+
+  opacity: 0.55 !important;
+
+  transition:
+    width 220ms ease,
+    opacity 220ms ease,
+    background-color 220ms ease;
+}
+
+
+/* ---------------------------------------------------------
+   Hover / keyboard focus
+   --------------------------------------------------------- */
+
+.cv-page__rail a:hover
+.cv-page__rail-label,
+.cv-page__rail a:focus-visible
+.cv-page__rail-label {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+
+.cv-page__rail a:hover
+.cv-page__rail-line,
+.cv-page__rail a:focus-visible
+.cv-page__rail-line {
+  width: 1rem !important;
+
+  opacity: 0.9 !important;
+}
+
+
+/*
+ * Important:
+ * hovering another section does NOT make its number red.
+ */
+.cv-page__rail a:not(.is-active):hover
+.cv-page__rail-number {
+  color: inherit !important;
+}
+
+
+/* ---------------------------------------------------------
+   Active section
+   --------------------------------------------------------- */
+
+.cv-page__rail a.is-active {
+  color: var(--global-theme-color) !important;
+}
+
+
+.cv-page__rail a.is-active
+.cv-page__rail-label {
+  color: var(--global-theme-color) !important;
+}
+
+
+.cv-page__rail a.is-active
+.cv-page__rail-number {
+  color: var(--global-theme-color) !important;
+}
+
+
+.cv-page__rail a.is-active
+.cv-page__rail-line {
+  width: 1.4rem !important;
+
+  opacity: 1 !important;
+
+  background:
+    var(--global-theme-color) !important;
+}
+
+
+/* ---------------------------------------------------------
+   Same responsive cutoff as homepage
+   --------------------------------------------------------- */
+
+@media (max-width: 1180px) {
+  .cv-page__rail {
+    display: none !important;
+  }
+}
+
+
+/* === CV final spacing + static illustration reveal === */
+
+
+/* ---------------------------------------------------------
+   More compact hero metadata
+   --------------------------------------------------------- */
+
+.cv-page__meta {
+  gap: 0.42rem !important;
+
+  line-height: 1.35;
+}
+
+
+.cv-page__download {
+  margin-bottom: 0.65rem !important;
+}
+
+
+.cv-page__socials {
+  gap:
+    0.45rem
+    1.15rem !important;
+
+  margin-top: 0.35rem !important;
+}
+
+
+/*
+ * Keep the email visually quiet without creating a huge
+ * vertical break around it.
+ */
+.cv-page__meta > span,
+.cv-page__meta > a:not(.cv-page__download),
+.cv-page__socials {
+  margin-bottom: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   Static Rössler — soft appearance only
+   --------------------------------------------------------- */
+
+.cv-page__rossler {
+  opacity: 0;
+
+  transition:
+    opacity 850ms cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+
+.cv-page__rossler.is-ready {
+  opacity: 1;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .cv-page__rossler {
+    opacity: 1;
+    transition: none !important;
+  }
+}
+
+
+/* === CV skills hover-only interaction === */
+
+
+/*
+ * Skills are intentionally excluded from scroll activation.
+ * Interaction happens only on direct hover/focus.
+ */
+
+.cv-skill-group {
+  transform: none !important;
+}
+
+
+.cv-skill-group.is-active {
+  transform: none !important;
+}
+
+
+.cv-skill-group h3,
+.cv-skill-group p {
+  transform-origin: left center;
+
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 220ms ease;
+}
+
+
+/*
+ * Preserve the functional typography explicitly.
+ */
+.cv-skill-group p {
+  font-family:
+    "Poppins",
+    sans-serif !important;
+
+  font-style: normal !important;
+}
+
+
+/*
+ * Only the hovered skill grows.
+ */
+.cv-skill-group:hover h3,
+.cv-skill-group:hover p,
+.cv-skill-group:focus-within h3,
+.cv-skill-group:focus-within p {
+  transform: scale(1.025);
+}
+
+
+.cv-skill-group:hover p,
+.cv-skill-group:focus-within p {
+  color: var(--global-text-color);
+}
+
+
+/*
+ * Neutralise the old scroll-active text override.
+ */
+.cv-skill-group.is-active p {
+  color: var(--global-text-color-light) !important;
+}
+
