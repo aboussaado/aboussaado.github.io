@@ -1,0 +1,536 @@
+
+/* =========================================================
+   EDITORIAL PUBLICATIONS PAGE
+   ========================================================= */
+
+.publications-page {
+  width: 100%;
+  padding:
+    clamp(7.5rem, 11vw, 11rem)
+    clamp(1.4rem, 4vw, 4rem)
+    clamp(6rem, 10vw, 10rem);
+
+  color: var(--global-text-color);
+}
+
+.publications-page__inner {
+  width: min(1600px, 100%);
+  margin: 0 auto;
+}
+
+.publications-page__header {
+  width: min(980px, 100%);
+  margin-bottom: clamp(5rem, 8vw, 8rem);
+}
+
+.publications-page__eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--global-theme-color);
+}
+
+.publications-page__header h1 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(5rem, 9vw, 9rem);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+
+  color: var(--global-text-color);
+}
+
+.publications-page__header p {
+  max-width: 34ch;
+  margin: 2rem 0 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+  font-weight: 400;
+  line-height: 1.55;
+
+  color: var(--global-text-color-light);
+}
+
+
+/* Jekyll Scholar year headings */
+
+.publications-page h2.bibliography {
+  margin:
+    clamp(4rem, 7vw, 7rem)
+    0
+    1.25rem;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  color: var(--global-theme-color);
+}
+
+.publications-page ol.bibliography {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.publications-page ol.bibliography > li {
+  margin: 0;
+}
+
+
+/* Publication entry */
+
+.publication-entry {
+  display: grid;
+  grid-template-columns:
+    minmax(80px, 0.15fr)
+    minmax(0, 1.3fr)
+    minmax(280px, 0.72fr);
+
+  gap: clamp(2rem, 4vw, 5rem);
+
+  padding:
+    clamp(2.7rem, 4vw, 4.3rem)
+    0;
+
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.publications-page ol.bibliography > li:last-child .publication-entry {
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.publication-entry__year {
+  padding-top: 0.15rem;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+
+  color: var(--global-theme-color);
+}
+
+.publication-entry__body {
+  min-width: 0;
+}
+
+.publication-entry__title {
+  max-width: 18ch;
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.5rem, 4vw, 4.25rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+
+  color: var(--global-text-color);
+
+  transition:
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.publication-entry:hover .publication-entry__title {
+  color: var(--global-theme-color);
+  transform: translateX(4px);
+}
+
+.publication-entry__authors {
+  max-width: 60ch;
+  margin: 1.5rem 0 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: var(--global-text-color);
+}
+
+.publication-entry__author-self {
+  font-weight: 600;
+}
+
+.publication-entry__venue {
+  max-width: 60ch;
+  margin: 0.55rem 0 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: var(--global-text-color-light);
+}
+
+.publication-entry__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.35rem;
+
+  margin-top: 1.65rem;
+}
+
+.publication-entry__links a,
+.publication-entry__cite {
+  position: relative;
+
+  padding: 0 0 0.18rem;
+  border: 0;
+  background: transparent;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.4;
+
+  color: var(--global-theme-color);
+
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.publication-entry__links a::after,
+.publication-entry__cite::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 1px;
+
+  background: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 220ms ease;
+}
+
+.publication-entry__links a:hover::after,
+.publication-entry__cite:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.publication-entry__preview {
+  align-self: start;
+
+  margin: 0;
+  padding: 0.65rem;
+
+  border: 1px solid var(--global-divider-color);
+}
+
+.publication-entry__preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .publication-entry {
+    grid-template-columns:
+      70px
+      minmax(0, 1fr);
+  }
+
+  .publication-entry__preview {
+    grid-column: 2;
+    width: min(620px, 100%);
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .publications-page {
+    padding:
+      7rem
+      1.3rem
+      5rem;
+  }
+
+  .publications-page__header {
+    margin-bottom: 4.5rem;
+  }
+
+  .publications-page__header h1 {
+    font-size: clamp(4.2rem, 20vw, 6.5rem);
+  }
+
+  .publication-entry {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+
+    padding:
+      2.8rem
+      0;
+  }
+
+  .publication-entry__year,
+  .publication-entry__preview {
+    grid-column: auto;
+  }
+
+  .publication-entry__title {
+    max-width: none;
+    font-size: clamp(2.5rem, 12vw, 3.4rem);
+  }
+
+  .publication-entry__preview {
+    width: 100%;
+    margin-top: 0.7rem;
+  }
+}
+
+
+/* =========================================================
+   PUBLICATIONS PAGE FINAL POLISH
+   ========================================================= */
+
+/* Desktop: keep authors on one line when possible */
+@media (min-width: 1181px) {
+  .publication-entry__authors {
+    white-space: nowrap;
+    font-size: 0.88rem;
+  }
+}
+
+/* Smaller screens: normal wrapping */
+@media (max-width: 1180px) {
+  .publication-entry__authors {
+    white-space: normal;
+  }
+}
+
+/* Preview card: same corner-accent idea as the homepage portrait */
+.publication-entry__preview {
+  position: relative;
+  align-self: center;
+
+  margin: 0;
+  padding: 0.85rem;
+
+  border: 1px solid var(--global-divider-color);
+  background: transparent;
+
+  overflow: visible;
+}
+
+.publication-entry__preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* top-left corner */
+.publication-entry__preview::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 108px;
+  height: 108px;
+
+  border-top: 2px solid var(--global-theme-color);
+  border-left: 2px solid var(--global-theme-color);
+
+  border-top-left-radius: 16px;
+  pointer-events: none;
+}
+
+/* bottom-right corner */
+.publication-entry__preview::after {
+  content: "";
+  position: absolute;
+  right: -14px;
+  bottom: -14px;
+  width: 108px;
+  height: 108px;
+
+  border-right: 2px solid var(--global-theme-color);
+  border-bottom: 2px solid var(--global-theme-color);
+
+  border-bottom-right-radius: 16px;
+  pointer-events: none;
+}
+
+/* Slightly finer preview proportions on large screens */
+@media (min-width: 1181px) {
+  .publication-entry {
+    grid-template-columns:
+      minmax(72px, 0.14fr)
+      minmax(0, 1.38fr)
+      minmax(300px, 0.62fr);
+  }
+
+  .publication-entry__preview {
+    width: min(100%, 520px);
+    justify-self: end;
+  }
+}
+
+
+/* === Lorenz 63 header illustration === */
+
+.publications-page__header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 0.85fr);
+  gap: clamp(4rem, 8vw, 9rem);
+  align-items: center;
+}
+
+.publications-page__header-copy {
+  min-width: 0;
+}
+
+.publications-page__lorenz {
+  width: 100%;
+  max-width: 620px;
+  justify-self: end;
+
+  color: #a31f34;
+}
+
+.lorenz-63 {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.lorenz-63__curve,
+.lorenz-63__glow {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lorenz-63__curve {
+  stroke: currentColor;
+  stroke-width: 1.45;
+  opacity: 0.92;
+}
+
+.lorenz-63__glow {
+  stroke: currentColor;
+  stroke-width: 5;
+  opacity: 0.055;
+}
+
+/* Dark mode: scientific blue */
+html[data-theme="dark"] .publications-page__lorenz {
+  color: #4147ff;
+}
+
+html[data-theme="dark"] .lorenz-63__curve {
+  opacity: 0.96;
+}
+
+html[data-theme="dark"] .lorenz-63__glow {
+  opacity: 0.12;
+}
+
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .publications-page__header {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.7fr);
+    gap: 3rem;
+  }
+
+  .publications-page__lorenz {
+    max-width: 480px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 760px) {
+  .publications-page__header {
+    display: block;
+  }
+
+  .publications-page__lorenz {
+    width: min(100%, 430px);
+    margin-top: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* === Lorenz 63 motion === */
+
+.publications-page__lorenz {
+  transition: color 350ms ease;
+}
+
+/*
+ * The curve is revealed once when the Publications page
+ * appears. The later JS motion only changes its projection.
+ */
+.lorenz-63__curve,
+.lorenz-63__glow {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.publications-page__lorenz.is-ready .lorenz-63__curve {
+  animation: lorenz-draw 3.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.publications-page__lorenz.is-ready .lorenz-63__glow {
+  animation: lorenz-draw 4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes lorenz-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lorenz-63__curve,
+  .lorenz-63__glow {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    animation: none !important;
+  }
+}
+
+
+/* === Lorenz rendering precision === */
+
+.lorenz-63__curve,
+.lorenz-63__glow {
+  shape-rendering: geometricPrecision;
+}
+
+.lorenz-63__curve {
+  stroke-width: 1.35;
+}
+

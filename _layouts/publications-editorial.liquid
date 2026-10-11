@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<section class="publications-page">
+  <div class="publications-page__inner">
+
+    <header class="publications-page__header">
+
+      <div class="publications-page__header-copy">
+        <span class="publications-page__eyebrow">
+          Research output
+        </span>
+
+        <h1>Publications</h1>
+
+        <p>
+          Work at the intersection of dynamical systems,
+          machine learning, and applied mathematics.
+        </p>
+      </div>
+
+      <div class="publications-page__lorenz" aria-hidden="true">
+        <svg
+          class="lorenz-63"
+          viewBox="0 0 620 420"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <path class="lorenz-63__glow"></path>
+          <path class="lorenz-63__curve"></path>
+        </svg>
+      </div>
+
+    </header>
+
+    <div class="publications-page__content">
+      {{ content }}
+    </div>
+
+  </div>
+</section>
+
+<script src="{{ '/assets/js/publications-editorial.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/publications-lorenz.js' | relative_url }}"></script>
